@@ -1,0 +1,6 @@
+module Pods_stsNew_stsNewTests {
+  umbrella header "Pods-stsNew-stsNewTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
