@@ -70,17 +70,10 @@ export const AuthProvider = ({children}) => {
                 },
                 getUserContacts: () => {
                     db.ref('users/' + user.uid + '/positiveContacts').on('value', snapshot => {
-                        Object.size = function(obj) {
-                            var size = 0, key;
-                            for (key in obj) {
-                                if (obj.hasOwnProperty(key)) size++;
-                            }
-                            return size;
-                        };
                         iCont = snapshot.val();
                       });
 
-                      return Object.size(iCont);
+                      return Object.keys(iCont).length
                 },
                 setUserLocationInfo: (props) => {
                     if(props.coords.speed < 5){

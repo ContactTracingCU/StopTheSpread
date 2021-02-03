@@ -65,7 +65,6 @@ const HomeScreen = ({navigation}) =>{
           <View style={styles.positiveContacts}>
             <Text>{'Positive Contacts: ' + getUserContacts()}</Text>
           </View>
-
           <View style={styles.buttons}> 
             {/* <GetContacts
             buttonTitle = 'Get Positive Contacts'
