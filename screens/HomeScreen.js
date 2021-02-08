@@ -23,6 +23,14 @@ const HomeScreen = ({navigation}) =>{
   const {user, logout, setUserInfectionStatus, getUserInfectionStatus, getUserContacts} = useContext(AuthContext);
   const sheetRef = React.useRef(null);
 
+  //added state management using hooks
+  const [infectStatus , setInfectStatus] = useState('Click on report to update');
+  const clickHandler = (s) =>{
+    setInfectStatus(s);
+  }
+
+
+
   // set up render content for bottom sheet
   const renderContent = () => (
       <View
@@ -39,15 +47,15 @@ const HomeScreen = ({navigation}) =>{
     
         <ReportNegative
           buttonTitle='Negative'
-          onPress={() =>{sheetRef.current.snapTo(0);  return setUserInfectionStatus('N')}} />
+          onPress={() =>{sheetRef.current.snapTo(0); clickHandler('Negative'); return setUserInfectionStatus('N')}} />
     
         <ReportSymptoms
           buttonTitle='Symptoms'
-          onPress={() =>{sheetRef.current.snapTo(0);  return setUserInfectionStatus('M')}} />
+          onPress={() =>{sheetRef.current.snapTo(0); clickHandler('Symptomatic'); return setUserInfectionStatus('M')}} />
     
         <ReportPositive
           buttonTitle='Positive'
-          onPress={() =>{sheetRef.current.snapTo(0); return setUserInfectionStatus('P');}} />
+          onPress={() =>{sheetRef.current.snapTo(0); clickHandler('Positive'); return setUserInfectionStatus('P');}} />
 
         <ReportCancel
                   buttonTitle='cancel'
@@ -60,10 +68,13 @@ const HomeScreen = ({navigation}) =>{
         <View style={styles.container}>
           <View style={styles.bottomView}>
             <Text>{user.uid}</Text>
-            <Text>{'Infection Status: ' + getUserInfectionStatus()}</Text>
           </View>
           <View style={styles.positiveContacts}>
             <Text>{'Positive Contacts: ' + getUserContacts()}</Text>
+          </View>
+            <Text>Your infection status: {infectStatus}</Text>
+          <View>
+
           </View>
 
           <View style={styles.buttons}> 
@@ -79,7 +90,7 @@ const HomeScreen = ({navigation}) =>{
             <FormButton 
               buttonTitle='Logout'
               onPress={() => {return logout()}} />
-            </View>
+          </View>
 
           {/* initialize bottom sheet */}
           <BottomSheet
