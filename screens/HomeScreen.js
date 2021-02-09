@@ -17,9 +17,11 @@ import GetContacts from '../components/GetContacts'
 //    used for animations but not used at the moment
 import Animated from 'react-native-reanimated'; 
 import BottomSheet from 'reanimated-bottom-sheet';
+import ProgressButton from '../components/ProgressButton';
 
 
 const HomeScreen = ({navigation}) =>{
+  
   const {user, logout, setUserInfectionStatus, getUserInfectionStatus, getUserContacts} = useContext(AuthContext);
   const sheetRef = React.useRef(null);
 
@@ -27,7 +29,8 @@ const HomeScreen = ({navigation}) =>{
   const [infectStatus , setInfectStatus] = useState('Click on report to update');
   const clickHandler = (s) =>{
     setInfectStatus(s);
-  }
+  };
+
 
 
 
@@ -65,6 +68,7 @@ const HomeScreen = ({navigation}) =>{
 
     // had to move id and infenction status to make room for buttons
     return (
+      
         <View style={styles.container}>
           <View style={styles.bottomView}>
             <Text>{user.uid}</Text>
@@ -73,10 +77,6 @@ const HomeScreen = ({navigation}) =>{
             <Text>{'Positive Contacts: ' + getUserContacts()}</Text>
           </View>
             <Text>Your infection status: {infectStatus}</Text>
-          <View>
-
-          </View>
-
           <View style={styles.buttons}> 
             {/* <GetContacts
             buttonTitle = 'Get Positive Contacts'

@@ -7,7 +7,7 @@ import { AuthContext } from '../navigation/AuthProvider';
 
 //'https://coronavirus.jhu.edu/us-map'
 const ResourceScreen = ({navigation}) =>{
-    const {user, logout} = useContext(AuthContext);
+    const {user, logout, getUserInfectionStatus} = useContext(AuthContext);
     return (
         <View style={styles.container}>
             <SafeAreaView style={styles.descriptionContainerVer}>
@@ -16,6 +16,7 @@ const ResourceScreen = ({navigation}) =>{
                 />
                 <View style={styles.bottomView}>
                     <Text>{user.uid}</Text>
+                    <Text>{getUserInfectionStatus()}</Text>
                 </View>
             </SafeAreaView>
 

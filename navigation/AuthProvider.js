@@ -11,6 +11,9 @@ export const AuthProvider = ({children}) => {
     let iStat = '';
     let iCont = '';
     let keys = '';
+    let usr;
+    
+    
     
     return (
         <AuthContext.Provider
@@ -65,9 +68,48 @@ export const AuthProvider = ({children}) => {
                     db.ref('users/' + user.uid + '/infectionStatus').on('value', snapshot => {
                         iStat = snapshot.val();
                       });
+                      return iStat;
                     
-                    return iStat;
                 },
+                /*getUsers: () =>{
+                    db.ref('users')
+                    .limitToFirst(10)
+                    .once('value')
+                    .then( snapshot => { 
+                        let oVal = snapshot.val();
+                        //console.log( Object.keys(oVal).length, oVal[Object.keys(oVal)[0]]);
+
+                        let mapArr = [];
+                        //store object lat, long, weight(convert from infectionStatus) in array
+                        //each no try-catch; each users must have infectionStatus, locationInfo.lat/long
+                        for(let i=0;i<Object.keys(oVal).length;i++){
+                            let fireObj = oVal[Object.keys(oVal)[i]];
+                            let mapWeight = fireObj['infectionStatus'];
+                            //convert infectionStatus into weights
+                            if(mapWeight == 'P'){
+                                mapWeight = .3;
+                            }else if(mapWeight == 'N'){
+                                mapWeight = .05;
+                            }else{
+                                mapWeight = .1;
+                            }
+                            let mapObj = {
+                                'latitude': fireObj['locationInfo']['lat'],
+                                'longitude': fireObj['locationInfo']['long'],
+                                'weight': mapWeight
+                            }
+                            mapArr.push(mapObj);
+                        
+                        }
+                        console.log(typeof(mapArr), mapArr);
+                        usr = mapArr;
+                        
+                    });
+                    return usr;
+                    
+                
+                    
+                },*/
                 getUserContacts: () => {
                     db.ref('users/' + user.uid + '/positiveContacts').on('value', snapshot => {
                         Object.size = function(obj) {
@@ -80,7 +122,7 @@ export const AuthProvider = ({children}) => {
                         iCont = snapshot.val();
                       });
 
-                      return Object.size(iCont);
+                      //return Object.size(iCont);
                 },
                 setUserLocationInfo: (props) => {
                     if(props.coords.speed < 5){
