@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, Button, SafeAreaView} from 'react-native';
 
 //custom components
 import FormButton from '../components/FormButton';
@@ -18,6 +18,8 @@ import GetContacts from '../components/GetContacts'
 import Animated from 'react-native-reanimated'; 
 import BottomSheet from 'reanimated-bottom-sheet';
 import ProgressButton from '../components/ProgressButton';
+import SlidingUpPanel from 'rn-sliding-up-panel';
+import { WebView } from 'react-native-webview';
 
 
 const HomeScreen = ({navigation}) =>{
@@ -69,14 +71,44 @@ const HomeScreen = ({navigation}) =>{
     // had to move id and infenction status to make room for buttons
     return (
       
-        <View style={styles.container}>
-          <View style={styles.bottomView}>
-            <Text>{user.uid}</Text>
-          </View>
+      <View style={styles.container} backgroundColor={'#a6e4d0'} >
+        <View style={styles.webView}>
+            <SafeAreaView style={styles.webView2}>
+                <WebView
+                    source={{ uri: 'https://www.cdc.gov/coronavirus/2019-ncov' }}
+                />
+                <View >
+                    <Text>{getUserInfectionStatus()}</Text>
+                </View>
+            </SafeAreaView>
+
+        </View>
+        <View style={styles.buttonShow}>
+        <Button  title='Show more' onPress={() => this._panel.show()} />
+        </View>
+          <SlidingUpPanel ref={c => this._panel = c} >
+            <SafeAreaView>
           <View style={styles.positiveContacts}>
             <Text>{'Positive Contacts: ' + getUserContacts()}</Text>
           </View>
-            <Text>Your infection status: {infectStatus}</Text>
+          <View style={styles.top}>
+              <Text style={styles.text}>Hello User:</Text>
+              <Text style={{color: '#a6e4d0',fontSize:18, textAlign: 'center', fontFamily: 'Iowan Old Style'}}>{user.uid}</Text>
+          </View>
+          <View style={styles.middle}>
+              <Text style={styles.text}>Directions:</Text>
+              <Text style={{color: '#a6e4d0',fontSize:18, textAlign: 'center', fontFamily: 'Iowan Old Style'}}>1) Report your infection status (To stay anonymous, report Negative)</Text>
+              <Text style={{color: '#a6e4d0',fontSize:18, textAlign: 'center', fontFamily: 'Iowan Old Style'}}>2) Navigate to Tracking, press Start Tracking</Text>
+          </View>
+          <View style={styles.bottom}>
+              <Text style={{color: 'white',fontSize:18, fontWeight: 'bold', fontFamily: 'Iowan Old Style'}}>Your infection status:</Text>
+              <Text style={{color: '#a6e4d0',fontSize:18, textAlign: 'center', fontFamily: 'Iowan Old Style'}}>{infectStatus}</Text>
+              
+          </View>
+          <View style={styles.bottomHide}>
+            <Button title='Hide' onPress={() => this._panel.hide()} />
+          </View>
+          
           <View style={styles.buttons}> 
             {/* <GetContacts
             buttonTitle = 'Get Positive Contacts'
@@ -93,12 +125,17 @@ const HomeScreen = ({navigation}) =>{
           </View>
 
           {/* initialize bottom sheet */}
+          
+          </SafeAreaView>
+          </SlidingUpPanel>
           <BottomSheet
             ref={sheetRef}
             snapPoints={[0, 470]}
             borderRadius={10}
             renderContent={renderContent} />
-        </View>
+        
+        
+      </View>
     );
 };
 export default HomeScreen;
@@ -109,7 +146,8 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      paddingTop: 20,
+      flex: 1,
+      
     },
     logo: {
       height: 150,
@@ -117,10 +155,12 @@ const styles = StyleSheet.create({
       resizeMode: 'cover',
     },
     text: {
-      fontSize: 28,
-      marginBottom: 10,
-      color: '#051d5f',
-      marginVertical: 35
+      fontSize: 35,
+      marginBottom: 5,
+      //color: '#051d5f',
+      color: 'white',
+      fontFamily: 'Iowan Old Style',
+      marginTop: 0
     },
     navButton: {
       marginTop: 15,
@@ -148,15 +188,113 @@ const styles = StyleSheet.create({
     },
     buttons:{
       width: '100%',
-      bottom: -250
+      bottom: -750
     },
     positiveContacts:{
       backgroundColor : 'yellow',
-      top: -140,
+      //top: -140,
       width: '100%',
       justifyContent: 'center',
       alignItems: 'center',
-      height: 50
-    }
+      height: 35,
+      position: 'absolute', //Here is the trick
+      top:120
+    },
+    top: {
+      flex: .1,
+      backgroundColor: "black",
+      borderColor: 'white',
+      borderWidth: 7,
+      borderTopLeftRadius: 30,
+      borderTopRightRadius: 30,
+      borderBottomLeftRadius: 30,
+      borderBottomRightRadius: 30,
+      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 130,
+      padding: 15,
+      margin: 40,
+      width: 350
+      
+      
+    },
+    middle: {
+      flex: 0.3,
+      backgroundColor: "black",
+      borderWidth: 7,
+      borderColor: 'white',
+      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 275,
+      borderTopLeftRadius: 30,
+      borderTopRightRadius: 30,
+      borderBottomLeftRadius: 30,
+      borderBottomRightRadius: 30,
+      padding: 15,
+      margin: 40,
+      width: 350
+      
+    },
+    bottom: {
+      flex: 0.3,
+      backgroundColor: "black",
+      borderColor: 'white',
+      borderWidth: 7,
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius: 20,
+      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 475,
+      borderTopLeftRadius: 20,
+      borderTopRightRadius: 20,
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius: 20,
+      margin: 60,
+      padding: 10,
+      width: 300
+    },
+    bottomHide: {
+      
+      backgroundColor: 'white',
+      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 500,
+      backgroundColor: "white",
+      borderColor: 'white',
+      borderWidth: 5,
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius: 20,
+      borderTopLeftRadius: 20,
+      borderTopRightRadius: 20,
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius: 20,
+      margin: 180,
+      
+    },
+    buttonShow: {
+      marginTop: 0,
+      backgroundColor: "white",
+      borderColor: 'white',
+      borderWidth: 5,
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius: 20,
+      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 40,
+      borderTopLeftRadius: 20,
+      borderTopRightRadius: 20,
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius: 20,
+      
+    },
+
+    webView : {
+      width: 100,
+      flex: 1
+      
+      
+    },
+    webView2 : {
+      top: 261,
+      width: 100,
+      flex: 9,
+      width: 440,
+      margin: -166
+      
+
+      
+    },
+
+
   });
   

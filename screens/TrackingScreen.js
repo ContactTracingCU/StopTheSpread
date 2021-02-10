@@ -288,7 +288,8 @@ export default class Tracking extends Component {
 
 const styles = StyleSheet.create({
   body: {
-    backgroundColor: Colors.lighter,
+    //backgroundColor: Colors.lighter,
+    backgroundColor: '#a6e4d0',
     flex: 1,
     //center everything along x and y 
     justifyContent: "center",

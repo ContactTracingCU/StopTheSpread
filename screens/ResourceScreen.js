@@ -15,7 +15,6 @@ const ResourceScreen = ({navigation}) =>{
                     source={{ uri: 'https://www.cdc.gov/coronavirus/2019-ncov' }}
                 />
                 <View style={styles.bottomView}>
-                    <Text>{user.uid}</Text>
                     <Text>{getUserInfectionStatus()}</Text>
                 </View>
             </SafeAreaView>

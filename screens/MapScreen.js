@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
   bottomView: {
     width: '100%',
     height: 50,
-    backgroundColor: '#a6e4d0',
+    //backgroundColor: '#a6e4d0',
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute', //Here is the trick
