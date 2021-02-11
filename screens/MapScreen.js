@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute', //Here is the trick
-    bottom: 11.2, //Here is the trick
+    bottom: 6.1, //Here is the trick
   },
   
 });

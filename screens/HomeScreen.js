@@ -25,7 +25,7 @@ import database from '@react-native-firebase/database';
 import { firebase } from '@react-native-firebase/database';
 import AwesomeButton from 'react-native-really-awesome-button';
 
-let iStatus = '';// must have variable globally if wished to use to store return values from firebase
+let iStatus = '';// must have variable globally(only works for fucntional component) if wished to use to store return values from firebase
 
 const HomeScreen = ({navigation}) =>{
   
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 120,
       padding: 15,
       margin: 40,
-      width: 350
+      width: 360,
       
       
     },
@@ -252,7 +252,7 @@ const styles = StyleSheet.create({
       borderBottomRightRadius: 30,
       padding: 15,
       margin: 40,
-      width: 350
+      width: 360
       
     },
     bottom: {
@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
       borderTopRightRadius: 20,
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20,
-      width: 400,
+      width: 120,
       
       
     },
@@ -335,7 +335,7 @@ const styles = StyleSheet.create({
       borderTopRightRadius: 20,
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20,
-      top: 600,
+      top: 585,
       backgroundColor: 'grey',
       justifyContent: 'center', alignItems: 'center', position: 'absolute',
       backgroundColor: "#a6e4d0",

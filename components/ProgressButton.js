@@ -8,7 +8,7 @@ import AwesomeButton from 'react-native-really-awesome-button';
      <AwesomeButton
         backgroundColor={'#a6e4d0'}
         width={432}
-        height={70}
+        height={60}
         textSize={40}
         textColor={'grey'}
         textFamily={'Iowan Old Style'}
