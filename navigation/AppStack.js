@@ -11,17 +11,20 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
+
 const AppStack = () => {
+  
     return (
       <Tab.Navigator
+      
         tabBarOptions={{
           style: {
             backgroundColor: 'black'
           },
-          activeTintColor: '#2e64e5',
+          activeTintColor: '#a6e4d0',
+          inactiveTintColor: 'grey',
           labelStyle: {
-            fontSize: 9,
-            color: '#a6e4d0',
+            fontSize: 11,
             fontWeight: 'bold'
 
         },
@@ -31,8 +34,9 @@ const AppStack = () => {
           component={HomeScreen}
           options={{
             tabBarLabel: 'Home',
-            tabBarIcon: () => (
-              <Ionicons name="home-sharp" color="#a6e4d0" size={24} />),
+            tabBarIcon: ({color}) => (
+              <Ionicons name="home" color={color} size={24} />),
+            
           }}
         />
         <Tab.Screen
@@ -40,8 +44,8 @@ const AppStack = () => {
         component={TrackingScreen}
         options={{
           tabBarLabel: 'Tracking',
-          tabBarIcon: () => (
-            <Ionicons name="navigate-sharp" color="#a6e4d0" size={24} />),
+          tabBarIcon: ({color}) => (
+            <Ionicons name="navigate" color={color} size={24} />),
         }}
       />
         <Tab.Screen
@@ -49,8 +53,8 @@ const AppStack = () => {
           component={MapScreen}
           options={{
             tabBarLabel: 'Map',
-            tabBarIcon: () => (
-              <Ionicons name="map-sharp" color="#a6e4d0" size={24} />),
+            tabBarIcon: ({color}) => (
+              <Ionicons name="map" color={color} size={24} />),
           }}
         />
       </Tab.Navigator>

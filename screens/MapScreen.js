@@ -14,12 +14,11 @@ import ProgressButton from '../components/ProgressButton';
 const db = firebase.app().database('https://sts0-76694.firebaseio.com');
 
 
-
-
-
 export default class HeatMap extends Component {
 
+
   static contextType = AuthContext;
+  
 
   constructor(){
     super();
@@ -55,6 +54,7 @@ export default class HeatMap extends Component {
   static navigationOptions = {
     title: 'Denver',
   };
+
 
   points = [
     
@@ -99,13 +99,14 @@ export default class HeatMap extends Component {
     { latitude: 40.0874, longitude: -105.0052, weight: .50},
     { latitude: 40.0824, longitude: -105.0024, weight: .40 },
     { latitude: 40.0232, longitude: -105.0014, weight: .30}*/
-  ];
 
+  ];
   getData = () => {
-    this.setState({'mapArr': []})
+    this.setState({'mapArr': []});
+    //mapArr = [];
     this.setState({'count': this.state.count + 1});
     db.ref('users')
-    .limitToFirst(10)
+    .limitToFirst(100)
     .once('value')
     .then( snapshot => { 
       let oVal = snapshot.val();
@@ -132,14 +133,29 @@ export default class HeatMap extends Component {
                             }
                             //this.state.mapArr.push(mapObj);
                             this.setState({ mapArr: [...this.state.mapArr, mapObj] }); //simple value
-                            
+                            //mapArr.push(mapObj); 
                         }
                         
 
     });//then
     console.log('in mappArr state', this.state.mapArr);
-    this.points = this.state.mapArr;
-    console.log('in points ', this.points);
+
+    ////
+    ////this cause to not update on first pressed because we are assigning a non-state points array
+    ///the points prop of heatmap. state changes will rerender but since the change is for a non-state prop, 
+    ///the screen does not rerender. On the second press, this.setState({'mapArr': []}) is called, which 
+    ///causes change in state so rerender, thats why you see coordinates show on second press.
+    ///
+    //this.points = this.state.mapArr;
+    //console.log('in points ', this.points);
+    ///
+    ///
+    ///testing global vars
+    ///
+    //console.log('in mappArr global', mapArr);
+    //points = mapArr;
+    //console.log(points);
+    
 
   }//getData function
   
@@ -159,7 +175,7 @@ export default class HeatMap extends Component {
           maxZoomLevel={11} // default => 20
         >
           <Heatmap
-            points={this.points}
+            points={this.state.mapArr}
             radius={40}
             opacity={1}
             gradient={{
@@ -194,6 +210,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute', //Here is the trick
-    bottom: 0, //Here is the trick
+    bottom: 11.2, //Here is the trick
   },
+  
 });

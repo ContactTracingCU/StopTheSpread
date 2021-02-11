@@ -65,7 +65,7 @@ export default SignUpScreen;
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: '#f9fafd',
+      backgroundColor: '#a6e4d0',
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',

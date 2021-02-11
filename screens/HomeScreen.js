@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useCallback} from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, Button, SafeAreaView} from 'react-native';
 
 //custom components
@@ -20,7 +20,12 @@ import BottomSheet from 'reanimated-bottom-sheet';
 import ProgressButton from '../components/ProgressButton';
 import SlidingUpPanel from 'rn-sliding-up-panel';
 import { WebView } from 'react-native-webview';
+import auth from '@react-native-firebase/auth';
+import database from '@react-native-firebase/database';
+import { firebase } from '@react-native-firebase/database';
+import AwesomeButton from 'react-native-really-awesome-button';
 
+let iStatus = '';// must have variable globally if wished to use to store return values from firebase
 
 const HomeScreen = ({navigation}) =>{
   
@@ -29,11 +34,27 @@ const HomeScreen = ({navigation}) =>{
 
   //added state management using hooks
   const [infectStatus , setInfectStatus] = useState('Click on report to update');
+
+  //force rerender
+  const [, updateState] = useState();
+  const forceUpdate = useCallback(() => updateState({}), []);
+
   const clickHandler = (s) =>{
     setInfectStatus(s);
   };
 
+  const reRender = () => {
+    forceUpdate();
+  }
 
+  const getUStat = () => {
+    const db = firebase.app().database('https://sts0-76694.firebaseio.com');
+    db.ref('users/' + user.uid + '/infectionStatus').on('value', snapshot => {
+      iStatus = snapshot.val();
+    });
+    console.log('in getUstat', iStatus);
+    return iStatus;
+  }
 
 
   // set up render content for bottom sheet
@@ -77,19 +98,18 @@ const HomeScreen = ({navigation}) =>{
                 <WebView
                     source={{ uri: 'https://www.cdc.gov/coronavirus/2019-ncov' }}
                 />
-                <View >
-                    <Text>{getUserInfectionStatus()}</Text>
-                </View>
             </SafeAreaView>
 
         </View>
         <View style={styles.buttonShow}>
-        <Button  title='Show more' onPress={() => this._panel.show()} />
+          <Button title={'Show more'}  onPress={() => this._panel.show()} />
+           
         </View>
           <SlidingUpPanel ref={c => this._panel = c} >
-            <SafeAreaView>
+            <SafeAreaView style={styles.bSheet}>
           <View style={styles.positiveContacts}>
             <Text>{'Positive Contacts: ' + getUserContacts()}</Text>
+            <Text>{'Infection status from Firebase: ' + getUStat()}</Text>
           </View>
           <View style={styles.top}>
               <Text style={styles.text}>Hello User:</Text>
@@ -108,6 +128,10 @@ const HomeScreen = ({navigation}) =>{
           <View style={styles.bottomHide}>
             <Button title='Hide' onPress={() => this._panel.hide()} />
           </View>
+          <View style={styles.fetch}>
+            <ProgressButton onPress={() => {reRender()}}/>
+          </View>
+         
           
           <View style={styles.buttons}> 
             {/* <GetContacts
@@ -203,13 +227,13 @@ const styles = StyleSheet.create({
     top: {
       flex: .1,
       backgroundColor: "black",
-      borderColor: 'white',
+      borderColor: 'grey',
       borderWidth: 7,
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
       borderBottomLeftRadius: 30,
       borderBottomRightRadius: 30,
-      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 130,
+      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 120,
       padding: 15,
       margin: 40,
       width: 350
@@ -220,8 +244,8 @@ const styles = StyleSheet.create({
       flex: 0.3,
       backgroundColor: "black",
       borderWidth: 7,
-      borderColor: 'white',
-      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 275,
+      borderColor: 'grey',
+      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 250,
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
       borderBottomLeftRadius: 30,
@@ -234,11 +258,11 @@ const styles = StyleSheet.create({
     bottom: {
       flex: 0.3,
       backgroundColor: "black",
-      borderColor: 'white',
+      borderColor: 'grey',
       borderWidth: 7,
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20,
-      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 475,
+      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 433,
       borderTopLeftRadius: 20,
       borderTopRightRadius: 20,
       borderBottomLeftRadius: 20,
@@ -249,25 +273,24 @@ const styles = StyleSheet.create({
     },
     bottomHide: {
       
-      backgroundColor: 'white',
-      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 500,
-      backgroundColor: "white",
-      borderColor: 'white',
-      borderWidth: 5,
+      justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 540,
+      backgroundColor: "black",
+      borderColor: 'grey',
+      borderWidth: 6,
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20,
       borderTopLeftRadius: 20,
       borderTopRightRadius: 20,
-      borderBottomLeftRadius: 20,
-      borderBottomRightRadius: 20,
-      margin: 180,
+      margin: 170,
+      width: 70,
+      height: 50,
       
     },
     buttonShow: {
       marginTop: 0,
-      backgroundColor: "white",
-      borderColor: 'white',
-      borderWidth: 5,
+      backgroundColor: '#a6e4d0',
+      borderColor: 'grey',
+      borderWidth: 6,
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20,
       justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 40,
@@ -275,6 +298,12 @@ const styles = StyleSheet.create({
       borderTopRightRadius: 20,
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20,
+      width: 400,
+      
+      
+    },
+    buttonShow2: {
+      color: '#a6e4d0',
       
     },
 
@@ -289,11 +318,35 @@ const styles = StyleSheet.create({
       width: 100,
       flex: 9,
       width: 440,
-      margin: -166
-      
-
-      
+      margin: -166,
     },
+    bSheet : {
+      top: -15,
+      width: 100,
+      flex: 9,
+      width: 400,
+      margin: 15,
+      justifyContent: 'center', alignItems: 'center', position: 'absolute', 
+      bottom: 800,
+    },
+
+    fetch :{
+      borderTopLeftRadius: 20,
+      borderTopRightRadius: 20,
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius: 20,
+      top: 600,
+      backgroundColor: 'grey',
+      justifyContent: 'center', alignItems: 'center', position: 'absolute',
+      backgroundColor: "#a6e4d0",
+      borderColor: 'grey',
+      borderWidth: 1,
+      width: 400,
+      height: 60,
+      padding: 1,
+
+    }
+    
 
 
   });

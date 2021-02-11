@@ -7,10 +7,10 @@ import AwesomeButton from 'react-native-really-awesome-button';
     return (
      <AwesomeButton
         backgroundColor={'#a6e4d0'}
-        width={430}
-        height={65}
-        textSize={24}
-        textColor={'black'}
+        width={432}
+        height={70}
+        textSize={40}
+        textColor={'grey'}
         textFamily={'Iowan Old Style'}
 
        progress
