@@ -128,6 +128,7 @@ export default class HeatMap extends Component {
       })
       .catch((error) => console.error(error))
       .finally(() => {
+        x = "null";
       });
     return x;
   }

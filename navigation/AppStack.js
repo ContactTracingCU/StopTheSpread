@@ -18,7 +18,7 @@ const AppStack = () => {
             fontSize: 20,
         },
         }}>
-        <Tab.Screen
+          <Tab.Screen
           name="Home"
           component={HomeScreen}
         />
@@ -27,7 +27,7 @@ const AppStack = () => {
           component={MapScreen}
         />
         <Tab.Screen
-          name="Resource"
+          name="Resources"
           component={ResourceScreen}
         />
       </Tab.Navigator>
