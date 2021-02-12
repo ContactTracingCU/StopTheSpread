@@ -105,7 +105,7 @@ const HomeScreen = ({navigation}) =>{
           <Button title={'Show more'}  onPress={() => this._panel.show()} />
            
         </View>
-          <SlidingUpPanel ref={c => this._panel = c} >
+          <SlidingUpPanel ref={c => this._panel = c} allowMomentum={true}>
             <SafeAreaView style={styles.bSheet}>
           <View style={styles.positiveContacts}>
             <Text>{'Positive Contacts: ' + getUserContacts()}</Text>
@@ -345,6 +345,26 @@ const styles = StyleSheet.create({
       height: 60,
       padding: 1,
 
+    },
+    panelHeader: {
+      height: 180,
+      backgroundColor: "#b197fc",
+      justifyContent: "flex-end",
+      padding: 24
+    },
+    textHeader: {
+      fontSize: 28,
+      color: "#FFF"
+    },
+    iconBg: {
+      backgroundColor: "#2b8a3e",
+      position: "absolute",
+      top: -24,
+      right: 18,
+      width: 48,
+      height: 48,
+      borderRadius: 24,
+      zIndex: 1
     }
     
 

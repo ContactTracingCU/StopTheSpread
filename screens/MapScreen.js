@@ -25,7 +25,8 @@ export default class HeatMap extends Component {
     
     this.state = {
       count:0,
-      mapArr: null,
+      mapArr: [],
+      markerArr: [],
       initialPosition: {
         latitude: 39.7453,//40
         longitude: -105.0007,//-74
@@ -110,18 +111,24 @@ export default class HeatMap extends Component {
     .once('value')
     .then( snapshot => { 
       let oVal = snapshot.val();
+      console.log('from oVal');
       //console.log( Object.keys(oVal).length, oVal[Object.keys(oVal)[0]]);
                         //store object lat, long, weight(convert from infectionStatus) in array
                         //each no try-catch; each users must have infectionStatus, locationInfo.lat/long
                         for(let i=0;i<Object.keys(oVal).length;i++){
                             let fireObj = oVal[Object.keys(oVal)[i]];
-                            let mapWeight = fireObj['infectionStatus'];
+                            let uInfectionStatus = fireObj['infectionStatus'];
+                            let mapWeight;
+                            ///get user id
+                            let userID = Object.keys(oVal)[i]
+                            ///get timestamp, then convert to date
+                            ////
                             //convert infectionStatus into weights
-                            if(mapWeight == 'P'){
+                            if(uInfectionStatus == 'P'){
                                 mapWeight = 90;
-                            }else if(mapWeight == 'N'){
+                            }else if(uInfectionStatus == 'N'){
                                 mapWeight = 1;
-                            }else if(mapWeight == 'D'){
+                            }else if(uInfectionStatus == 'D'){
                               mapWeight = 100;
                           }else{
                                 mapWeight = 35;
@@ -130,9 +137,18 @@ export default class HeatMap extends Component {
                                 latitude: fireObj['locationInfo']['lat'],
                                 longitude: fireObj['locationInfo']['long'],
                                 weight: mapWeight
-                            }
+                            };
+                            let markerObj = {
+                              latitude: fireObj['locationInfo']['lat'],
+                              longitude: fireObj['locationInfo']['long'],
+                              infectionStatus: uInfectionStatus,
+                              uID: userID,
+                          
+                            };
+
                             //this.state.mapArr.push(mapObj);
                             this.setState({ mapArr: [...this.state.mapArr, mapObj] }); //simple value
+                            this.setState({ markerArr: [...this.state.markerArr, markerObj] });
                             //mapArr.push(mapObj); 
                         }
                         
@@ -159,10 +175,25 @@ export default class HeatMap extends Component {
 
   }//getData function
   
-  
+  markers = () => {
+    return(
+    this.points.map(val => {
+      <MapView.Marker
+              coordinate={{
+              latitude: val.latitude,
+              longitude: val.longitude
+              }}
+              title = {"parking markers"}
+      > 
+      </MapView.Marker>
+
+     }));
+
+  }
 
   render() {
     const {user, getUserInfectionStatus, getUsers} = this.context;  
+    
 
     return (
       <View style={styles.container}>
@@ -174,6 +205,31 @@ export default class HeatMap extends Component {
           minZoomLevel={0}  // default => 0
           maxZoomLevel={11} // default => 20
         >
+          {this.state.markerArr.map((val) => {
+            let markerColor = '';
+            if(val.infectionStatus == 'P' || val.infectionStatus == 'D'){
+              markerColor = 'red';
+            }else if(val.infectionStatus == 'M'){
+              markerColor = '#FFD100';
+            }else {
+              markerColor = 'green';
+            }
+  return (<MapView.Marker
+          coordinate={{
+          latitude: val.latitude,
+          longitude: val.longitude
+          }}
+          pinColor = {markerColor}
+          opacity = {0.4}
+          
+         >
+           <Callout>
+                  <Text>{val.uID}</Text>
+          </Callout>
+         </MapView.Marker>
+         ); 
+ })}
+        
           <Heatmap
             points={this.state.mapArr}
             radius={40}
@@ -184,12 +240,12 @@ export default class HeatMap extends Component {
               colorMapSize: 2000
             }}
           >
+            
           </Heatmap>
+
         </MapView>
         <View style={styles.bottomView}>
-          <View>
             <ProgressButton onPress={this.getData}/>
-          </View>
         </View>
       </View>
     );
