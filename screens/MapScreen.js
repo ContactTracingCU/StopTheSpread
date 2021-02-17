@@ -115,6 +115,19 @@ export default class HeatMap extends Component {
       //console.log( Object.keys(oVal).length, oVal[Object.keys(oVal)[0]]);
                         //store object lat, long, weight(convert from infectionStatus) in array
                         //each no try-catch; each users must have infectionStatus, locationInfo.lat/long
+                        try{
+                            //Object.keys(oVal) - array of uIDs
+                            //Object.keys(oVal)[i] - referencing uID at index i
+                            //oVal[Object.keys(oVal)[i]] - value of each uID
+                        let ct = [];
+                        let ct2 = [];
+                        for(let i=0;i<Object.keys(oVal).length;i++){
+                          ct.push(Object.keys(oVal)[i]);
+                          ct2.push(Object.keys(oVal)[i]);
+                        }
+                        
+                        
+                        /////
                         for(let i=0;i<Object.keys(oVal).length;i++){
                             let fireObj = oVal[Object.keys(oVal)[i]];
                             let uInfectionStatus = fireObj['infectionStatus'];
@@ -133,11 +146,13 @@ export default class HeatMap extends Component {
                           }else{
                                 mapWeight = 35;
                             }
+                         
                             let mapObj = {
                                 latitude: fireObj['locationInfo']['lat'],
                                 longitude: fireObj['locationInfo']['long'],
                                 weight: mapWeight
                             };
+                            
                             let markerObj = {
                               latitude: fireObj['locationInfo']['lat'],
                               longitude: fireObj['locationInfo']['long'],
@@ -150,6 +165,8 @@ export default class HeatMap extends Component {
                             this.setState({ mapArr: [...this.state.mapArr, mapObj] }); //simple value
                             this.setState({ markerArr: [...this.state.markerArr, markerObj] });
                             //mapArr.push(mapObj); 
+                        }} catch(e){
+                          console.log(e);
                         }
                         
 
@@ -203,32 +220,9 @@ export default class HeatMap extends Component {
           style={styles.map}
           initialRegion={this.state.initialPosition}
           minZoomLevel={0}  // default => 0
-          maxZoomLevel={11} // default => 20
+          maxZoomLevel={13} // default => 20
         >
-          {this.state.markerArr.map((val) => {
-            let markerColor = '';
-            if(val.infectionStatus == 'P' || val.infectionStatus == 'D'){
-              markerColor = 'red';
-            }else if(val.infectionStatus == 'M'){
-              markerColor = '#FFD100';
-            }else {
-              markerColor = 'green';
-            }
-  return (<MapView.Marker
-          coordinate={{
-          latitude: val.latitude,
-          longitude: val.longitude
-          }}
-          pinColor = {markerColor}
-          opacity = {0.4}
           
-         >
-           <Callout>
-                  <Text>{val.uID}</Text>
-          </Callout>
-         </MapView.Marker>
-         ); 
- })}
         
           <Heatmap
             points={this.state.mapArr}
