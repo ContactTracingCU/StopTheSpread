@@ -14,7 +14,7 @@ export default ReportSymptoms;
 const styles = StyleSheet.create({
     buttonContainer: {
       marginTop: 10,
-      width: '75%',
+      width: '100%',
       height: windowHeight / 15,
       backgroundColor: 'grey',
       padding: 10,
