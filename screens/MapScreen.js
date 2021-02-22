@@ -119,17 +119,16 @@ export default class HeatMap extends Component {
                             //Object.keys(oVal) - array of uIDs
                             //Object.keys(oVal)[i] - referencing uID at index i
                             //oVal[Object.keys(oVal)[i]] - value of each uID
-                        let ct = [];
-                        let ct2 = [];
-                        for(let i=0;i<Object.keys(oVal).length;i++){
-                          ct.push(Object.keys(oVal)[i]);
-                          ct2.push(Object.keys(oVal)[i]);
-                        }
-                        
+
                         
                         /////
                         for(let i=0;i<Object.keys(oVal).length;i++){
                             let fireObj = oVal[Object.keys(oVal)[i]];
+                            ///fixed bug where you had to report your location to see others on the map, now you dont have to and can still see others on map
+                            if(fireObj['locationInfo'] == null){
+                              continue;
+                            }
+                            //////////////////////////////////
                             let uInfectionStatus = fireObj['infectionStatus'];
                             let mapWeight;
                             ///get user id
@@ -138,14 +137,15 @@ export default class HeatMap extends Component {
                             ////
                             //convert infectionStatus into weights
                             if(uInfectionStatus == 'P'){
-                                mapWeight = 90;
+                                mapWeight = 99;
                             }else if(uInfectionStatus == 'N'){
-                                mapWeight = 1;
+                                mapWeight = 9;
                             }else if(uInfectionStatus == 'D'){
                               mapWeight = 100;
                           }else{
-                                mapWeight = 35;
+                                mapWeight = 60;
                             }
+                            
                          
                             let mapObj = {
                                 latitude: fireObj['locationInfo']['lat'],
@@ -211,7 +211,14 @@ export default class HeatMap extends Component {
   render() {
     const {user, getUserInfectionStatus, getUsers} = this.context;  
     
-
+/*if(uInfectionStatus == 'P'){
+  mapWeight = 99;
+}else if(uInfectionStatus == 'N'){
+    mapWeight = 35;
+}else if(uInfectionStatus == 'D'){
+  mapWeight = 100;
+}else{
+    mapWeight = 70;*/
     return (
       <View style={styles.container}>
         <MapView
@@ -220,17 +227,16 @@ export default class HeatMap extends Component {
           style={styles.map}
           initialRegion={this.state.initialPosition}
           minZoomLevel={0}  // default => 0
-          maxZoomLevel={13} // default => 20
+          maxZoomLevel={14} // default => 20
         >
-          
         
           <Heatmap
             points={this.state.mapArr}
             radius={40}
             opacity={1}
             gradient={{
-              colors: ["red", "yellow", "purple"],
-              startPoints: [0.10, 0.4, .85],
+              colors: ["green", "orange", "red"],
+              startPoints: [0.05, 0.2, .5],
               colorMapSize: 2000
             }}
           >
