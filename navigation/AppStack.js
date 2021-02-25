@@ -4,6 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import MapScreen from '../screens/MapScreen';
 import ResourceScreen from '../screens/ResourceScreen';
+import TrackingScreen from "../screens/TrackingScreen";
 
 
 const Stack = createStackNavigator();
@@ -22,6 +23,10 @@ const AppStack = () => {
           name="Home"
           component={HomeScreen}
         />
+        <Tab.Screen
+        name="Tracking"
+        component={TrackingScreen}
+      />
         <Tab.Screen
           name="Map"
           component={MapScreen}
