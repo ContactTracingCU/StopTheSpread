@@ -21,9 +21,7 @@ import {
 import Geolocation from 'react-native-geolocation-service';
 import { AuthContext } from '../navigation/AuthProvider';
 
-
 export default class Tracking extends Component {
-  
   
   static contextType = AuthContext; //used to call functions from Auth Provider
   watchId = null; //number
@@ -47,6 +45,7 @@ export default class Tracking extends Component {
     speed: 0,
     timestamp: 0,
     county: null,
+    toggle: false
     /*
     format of location :{
       "coords": {"accuracy": number, 
@@ -60,6 +59,11 @@ export default class Tracking extends Component {
     }
     */ 
   };
+
+  getToggle = () => {
+    this.context.isEnabled;
+    console.log(this.context.isEnabled);  
+  }
 
   hasLocationPermissionIOS = async () => {
     // asks for location permission on iOS 
@@ -160,7 +164,6 @@ export default class Tracking extends Component {
   getLocation = async () => {
     /* Gets the current location of the user ands sets the state values
     */
-
     const hasLocationPermission = await this.hasLocationPermission();
 
     if (!hasLocationPermission) {
@@ -204,9 +207,17 @@ export default class Tracking extends Component {
       return; //do nothing if user denies location permission
     }
 
+    if(!this.getToggle()){
+      this.removeLocationUpdates();
+      updatesEnabled = false;
+      return;
+    }
+
     this.setState({ updatesEnabled: true }, () => {
       this.watchId = Geolocation.watchPosition(
         async (position) => {
+          
+          
           this.setState({ location: position,  latitude: position.coords.latitude,  longitude: position.coords.longitude, speed: position.coords.speed, timestamp: position.timestamp });
           console.log(position);
           await this.getCounty();
@@ -240,6 +251,8 @@ export default class Tracking extends Component {
       Geolocation.clearWatch(this.watchId);
       this.watchId = null;
       this.setState({ updatesEnabled: false });
+      console.log("Stopping tracking")
+
     }
   };
 
@@ -248,6 +261,7 @@ export default class Tracking extends Component {
       location,
     } = this.state;
     this.hasLocationPermission();
+    this.getToggle();
 
   return (
     // This section describes elements that the user sees
@@ -263,7 +277,7 @@ export default class Tracking extends Component {
 
 
 
-      <TouchableOpacity onPress = {this.getLocation} >
+      <TouchableOpacity onPress = {this.getLocation, this.getToggle} >
 					<Text style={styles.welcome}>Find My Coords?</Text>
 					<Text>Latitude: {this.state.latitude || ''}</Text>
             <Text>Longitude: {this.state.longitude || ''}</Text>
@@ -278,7 +292,7 @@ export default class Tracking extends Component {
                 : ''}
             </Text>
             <Text>County: {this.state.county || ''}</Text>
-
+            <Text>Switch is toggled: {this.toggle}</Text>
 				</TouchableOpacity>
       </SafeAreaView>
     </>

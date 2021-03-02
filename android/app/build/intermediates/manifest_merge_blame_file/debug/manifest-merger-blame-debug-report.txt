@@ -163,7 +163,7 @@
 90            android:name="com.google.firebase.components.ComponentDiscoveryService"
 90-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:34:13-84
 91            android:directBootAware="true"
-91-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ddd75143764ab93d51007ea2827790b6\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
+91-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\cf1540b1454352627a3fd57e7b63af7f\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
 92            android:exported="false" >
 92-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:35:13-37
 93            <meta-data
@@ -202,17 +202,17 @@
 110-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\c4fb6b3249f446fdb0995f0c1cd7339f\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
 111
 112        <provider
-112-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ddd75143764ab93d51007ea2827790b6\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
+112-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\cf1540b1454352627a3fd57e7b63af7f\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
 113            android:name="com.google.firebase.provider.FirebaseInitProvider"
-113-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ddd75143764ab93d51007ea2827790b6\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
+113-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\cf1540b1454352627a3fd57e7b63af7f\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
 114            android:authorities="com.stsnew.firebaseinitprovider"
-114-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ddd75143764ab93d51007ea2827790b6\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
+114-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\cf1540b1454352627a3fd57e7b63af7f\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
 115            android:directBootAware="true"
-115-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ddd75143764ab93d51007ea2827790b6\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
+115-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\cf1540b1454352627a3fd57e7b63af7f\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
 116            android:exported="false"
-116-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ddd75143764ab93d51007ea2827790b6\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
+116-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\cf1540b1454352627a3fd57e7b63af7f\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
 117            android:initOrder="100" />
-117-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ddd75143764ab93d51007ea2827790b6\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
+117-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\cf1540b1454352627a3fd57e7b63af7f\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
 118
 119        <receiver
 119-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:29:9-33:20
@@ -244,11 +244,11 @@
 133-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:43:13-69
 134
 135        <meta-data
-135-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\9557a9e67569bcac9a8860793c8b2a3e\jetified-play-services-basement-17.1.1\AndroidManifest.xml:23:9-25:69
+135-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\a1273b2256f7ba5cde8be82b028be699\jetified-play-services-basement-17.1.1\AndroidManifest.xml:23:9-25:69
 136            android:name="com.google.android.gms.version"
-136-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\9557a9e67569bcac9a8860793c8b2a3e\jetified-play-services-basement-17.1.1\AndroidManifest.xml:24:13-58
+136-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\a1273b2256f7ba5cde8be82b028be699\jetified-play-services-basement-17.1.1\AndroidManifest.xml:24:13-58
 137            android:value="@integer/google_play_services_version" />
-137-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\9557a9e67569bcac9a8860793c8b2a3e\jetified-play-services-basement-17.1.1\AndroidManifest.xml:25:13-66
+137-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\a1273b2256f7ba5cde8be82b028be699\jetified-play-services-basement-17.1.1\AndroidManifest.xml:25:13-66
 138    </application>
 139
 140</manifest>

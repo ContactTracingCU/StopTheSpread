@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, Image, StyleSheet, Switch } from 'react-native';
 
 //custom components
 import FormButton from '../components/FormButton';
@@ -12,15 +12,15 @@ import ReportPositive from '../components/ReportPositive'
 import ReportSymptoms from '../components/ReportSymptoms'
 import ReportCancel from '../components/ReportCancel'
 import GetContacts from '../components/GetContacts'
-
 // bottom sheet libraries
 //    used for animations but not used at the moment
 import Animated from 'react-native-reanimated'; 
 import BottomSheet from 'reanimated-bottom-sheet';
-
+import { createContext } from 'react';
+//export const HomeContext = createContext();
 
 const HomeScreen = ({navigation}) =>{
-  const {user, logout, setUserInfectionStatus, getUserInfectionStatus, getUserContacts} = useContext(AuthContext);
+  const {user, logout, setUserInfectionStatus, getUserInfectionStatus, isEnabled, toggleSwitch} = useContext(AuthContext);
   const sheetRef = React.useRef(null);
 
   // set up render content for bottom sheet
@@ -62,8 +62,14 @@ const HomeScreen = ({navigation}) =>{
             <Text>{user.uid}</Text>
             <Text>{'Infection Status: ' + getUserInfectionStatus()}</Text>
           </View>
-          <View style={styles.positiveContacts}>
-            <Text>{'Positive Contacts: ' + getUserContacts()}</Text>
+          <View style={styles.container}>
+            <Switch
+              trackColor={{ false: "#767577", true: "#81b0ff" }}
+              thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+              ios_backgroundColor="#3e3e3e"
+              onValueChange={toggleSwitch}
+              value={isEnabled}
+            />
           </View>
           <View style={styles.buttons}> 
             {/* <GetContacts
@@ -74,6 +80,8 @@ const HomeScreen = ({navigation}) =>{
               buttonTitle = 'Report'
               // on press snap to position in snapPoins list 
               onPress = {() => sheetRef.current.snapTo(1)} />
+
+            
 
             <FormButton 
               buttonTitle='Logout'

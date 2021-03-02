@@ -24,9 +24,9 @@ const AppStack = () => {
           component={HomeScreen}
         />
         <Tab.Screen
-        name="Tracking"
-        component={TrackingScreen}
-      />
+          name="Tracking"
+          component={TrackingScreen}
+        />
         <Tab.Screen
           name="Map"
           component={MapScreen}

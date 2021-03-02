@@ -11,12 +11,13 @@ export const AuthProvider = ({children}) => {
     let iStat = '';
     let iCont = '';
     let keys = '';
-    
+    const [isEnabled, setIsEnabled] = useState(false);
     return (
         <AuthContext.Provider
             value={{
                 user,
                 setUser,
+                isEnabled,
                 login: async (email, password) => {
                     try {
                         await auth().signInWithEmailAndPassword(email, password);
@@ -68,13 +69,6 @@ export const AuthProvider = ({children}) => {
                     
                     return iStat;
                 },
-                getUserContacts: () => {
-                    db.ref('users/' + user.uid + '/positiveContacts').on('value', snapshot => {
-                        iCont = snapshot.val();
-                      });
-
-                      return Object.keys(iCont).length
-                },
                 setUserLocationInfo: (props) => {
                     if(props.coords.speed < 5){
                         pushData = db.ref('users/' + user.uid + '/locationInfo/').update({
@@ -87,7 +81,7 @@ export const AuthProvider = ({children}) => {
                     
                 },
                 uploadUserLocation: (props, county) => {
-                    if(props.coords.speed < 10){ //if user is not traveling by motor vehicle, upload their location data.
+                    if(props.coords.speed < 5){ //if user is not traveling by motor vehicle, upload their location data.
                         pushData = db.ref('locations/' + county + '/' + Math.trunc(props.timestamp)).push({
                             user : user.uid,
                             lat: props.coords.latitude,
@@ -97,7 +91,14 @@ export const AuthProvider = ({children}) => {
                         updates[county] = props.timestamp;
                         addData = db.ref('users/' + user.uid + '/locationInfo/locations').update(updates);
                     }
-                }
+                },
+                toggleSwitch: async () => {
+                    try{
+                    setIsEnabled(previousState => !previousState);
+                    } catch(e){
+                    console.log(e);
+                        }
+                },
             }
         
         }

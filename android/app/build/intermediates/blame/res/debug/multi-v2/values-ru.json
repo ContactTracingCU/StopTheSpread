@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Starfall\\Documents\\GitHub\\StopTheSpread\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru\\values-ru.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Starfall\\.gradle\\caches\\transforms-2\\files-2.1\\9557a9e67569bcac9a8860793c8b2a3e\\jetified-play-services-basement-17.1.1\\res\\values-ru\\values.xml",
+                    "source": "C:\\Users\\Starfall\\.gradle\\caches\\transforms-2\\files-2.1\\a1273b2256f7ba5cde8be82b028be699\\jetified-play-services-basement-17.1.1\\res\\values-ru\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
