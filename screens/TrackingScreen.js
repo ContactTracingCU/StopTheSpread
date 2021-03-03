@@ -58,29 +58,36 @@ export default class Tracking extends Component {
       "mocked": boolean, 
       "timestamp": 1605936837000
     }
+    Geolocation.getCurrentPosition(
+          async(position) => {
+            console.log(position);
+            
+            //saves current location so app can display it on screen
+            this.setState({ location: position, latitude: position.coords.latitude,  longitude: position.coords.longitude, speed: position.coords.speed, timestamp: position.timestamp });
+            await this.getCounty();
+          },
+          (error) => {
+            // See error code charts below.
+            console.log(error.code, error.message);
+          },
+          { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+      );
     */ 
   };
 
-  getToggle = async () => {
-    while (true) {
-      this.context.isEnabled;
-    console.log("here");
-    if(this.context.isEnabled & !this.updatesEnabled)
-      {console.log("here 5");
-        this.getLocationUpdates();
-        
-      }
-    else if(!this.context.isEnabled){
-      console.log("here 6");
-        this.removeLocationUpdates();
-      }
-      console.log("here 2");
-    //await setTimeout(someMethod, 1000);
-    if (this.toggle)
-    console.log("here 3");
-      return;
+  loop = () =>{
+    if(this.context.isEnabled && !this.state.updatesEnabled)
+    {console.log("get location updates");
+      this.getLocationUpdates();
     }
-    console.log("here 4");
+  else if(!this.context.isEnabled && this.watchId!= null){
+    console.log("remove location updates");
+      this.removeLocationUpdates();
+    }
+  }
+
+  mainLoop = async () => {
+    mloop = setInterval(this.loop, 5000)
   }
 
   hasLocationPermissionIOS = async () => {
@@ -136,24 +143,10 @@ export default class Tracking extends Component {
 
    async componentDidMount() {
      //called at the beginning 
-     this.getToggle();
     if (async () => {
       await this.hasLocationPermission;}) {
         // when the user first opens this screen get the location
-      Geolocation.getCurrentPosition(
-          async(position) => {
-            console.log(position);
-            
-            //saves current location so app can display it on screen
-            this.setState({ location: position, latitude: position.coords.latitude,  longitude: position.coords.longitude, speed: position.coords.speed, timestamp: position.timestamp });
-            await this.getCounty();
-          },
-          (error) => {
-            // See error code charts below.
-            console.log(error.code, error.message);
-          },
-          { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-      );
+      this.mainLoop();
     }
   };
 
@@ -161,7 +154,7 @@ export default class Tracking extends Component {
     // called when the app terminates
     // stops location tracking 
     this.removeLocationUpdates();
-    this.toggle = true;
+    clearInterval(mloop);
   }
 
   getCounty = async () => {
@@ -231,7 +224,9 @@ export default class Tracking extends Component {
       this.watchId = Geolocation.watchPosition(
         async (position) => {
           
-          
+          if (!this.state.updatesEnabled) {
+            return; //stops tracking location if removeLocation updates is called
+          }
           this.setState({ location: position,  latitude: position.coords.latitude,  longitude: position.coords.longitude, speed: position.coords.speed, timestamp: position.timestamp });
           console.log(position);
           await this.getCounty();
