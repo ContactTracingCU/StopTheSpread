@@ -22,7 +22,8 @@ import { createContext } from 'react';
 const HomeScreen = ({navigation}) =>{
   const {user, logout, setUserInfectionStatus, getUserInfectionStatus, isEnabled, toggleSwitch} = useContext(AuthContext);
   const sheetRef = React.useRef(null);
-
+  const [switchOn, setSwitch] = useState(false);
+  
   // set up render content for bottom sheet
   const renderContent = () => (
       <View

@@ -12,6 +12,7 @@ import {
   PermissionsAndroid,
   Platform,
   Button,
+  SliderComponent,
 } from 'react-native';
 
 import {
@@ -60,9 +61,26 @@ export default class Tracking extends Component {
     */ 
   };
 
-  getToggle = () => {
-    this.context.isEnabled;
-    console.log(this.context.isEnabled);  
+  getToggle = async () => {
+    while (true) {
+      this.context.isEnabled;
+    console.log("here");
+    if(this.context.isEnabled & !this.updatesEnabled)
+      {console.log("here 5");
+        this.getLocationUpdates();
+        
+      }
+    else if(!this.context.isEnabled){
+      console.log("here 6");
+        this.removeLocationUpdates();
+      }
+      console.log("here 2");
+    //await setTimeout(someMethod, 1000);
+    if (this.toggle)
+    console.log("here 3");
+      return;
+    }
+    console.log("here 4");
   }
 
   hasLocationPermissionIOS = async () => {
@@ -118,6 +136,7 @@ export default class Tracking extends Component {
 
    async componentDidMount() {
      //called at the beginning 
+     this.getToggle();
     if (async () => {
       await this.hasLocationPermission;}) {
         // when the user first opens this screen get the location
@@ -142,6 +161,7 @@ export default class Tracking extends Component {
     // called when the app terminates
     // stops location tracking 
     this.removeLocationUpdates();
+    this.toggle = true;
   }
 
   getCounty = async () => {
@@ -195,7 +215,7 @@ export default class Tracking extends Component {
       );
     });
   };
-  getLocationUpdates = async () => {
+ getLocationUpdates = async () => {
     /*creates async thread that continuously tracks user location
       until removeLocationUpdates is called
 
@@ -206,13 +226,7 @@ export default class Tracking extends Component {
     if (!hasLocationPermission) {
       return; //do nothing if user denies location permission
     }
-
-    if(!this.getToggle()){
-      this.removeLocationUpdates();
-      updatesEnabled = false;
-      return;
-    }
-
+    console.log("has location permission");
     this.setState({ updatesEnabled: true }, () => {
       this.watchId = Geolocation.watchPosition(
         async (position) => {
@@ -251,8 +265,7 @@ export default class Tracking extends Component {
       Geolocation.clearWatch(this.watchId);
       this.watchId = null;
       this.setState({ updatesEnabled: false });
-      console.log("Stopping tracking")
-
+      console.log("Stopping tracking");
     }
   };
 
@@ -261,7 +274,6 @@ export default class Tracking extends Component {
       location,
     } = this.state;
     this.hasLocationPermission();
-    this.getToggle();
 
   return (
     // This section describes elements that the user sees
@@ -277,7 +289,7 @@ export default class Tracking extends Component {
 
 
 
-      <TouchableOpacity onPress = {this.getLocation, this.getToggle} >
+      <TouchableOpacity onPress = {this.getLocation} >
 					<Text style={styles.welcome}>Find My Coords?</Text>
 					<Text>Latitude: {this.state.latitude || ''}</Text>
             <Text>Longitude: {this.state.longitude || ''}</Text>
@@ -292,7 +304,6 @@ export default class Tracking extends Component {
                 : ''}
             </Text>
             <Text>County: {this.state.county || ''}</Text>
-            <Text>Switch is toggled: {this.toggle}</Text>
 				</TouchableOpacity>
       </SafeAreaView>
     </>
