@@ -30,6 +30,8 @@ const HomeScreen = ({ navigation }) => {
   const {
     logout,
     setUserInfectionStatus,
+    isEnabled,
+    toggleSwitch
   } = useContext(AuthContext);
   const sheetRef = React.useRef(null);
 
@@ -40,8 +42,8 @@ const HomeScreen = ({ navigation }) => {
   const [shouldShow, setShouldShow] = useState(true);
 
   // set up to get state of switch
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+  //const [isEnabled, setIsEnabled] = useState(false);
+  //const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
   const clickHandler = (s) => {
     setInfectStatus(s);

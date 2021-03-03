@@ -11,12 +11,14 @@ export const AuthProvider = ({ children }) => {
   let iCont = "";
   let keys = "";
   let usr;
+  const [isEnabled, setIsEnabled] = useState(false);
 
   return (
     <AuthContext.Provider
       value={{
         user,
         setUser,
+        isEnabled,
         login: async (email, password) => {
           try {
             await auth().signInWithEmailAndPassword(email, password);
@@ -105,6 +107,13 @@ export const AuthProvider = ({ children }) => {
               .update(updates);
           }
         },
+        toggleSwitch: async () => {
+          try{
+          setIsEnabled(previousState => !previousState);
+          } catch(e){
+          console.log(e);
+              }
+      },
       }}
     >
       {children}
