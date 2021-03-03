@@ -5,6 +5,7 @@ import HomeScreen from '../screens/HomeScreen';
 import MapScreen from '../screens/MapScreen';
 import ResourceScreen from '../screens/ResourceScreen';
 import TrackingScreen from "../screens/TrackingScreen";
+import NotificationScreen from "../screens/NotificationScreen";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
@@ -39,6 +40,15 @@ const AppStack = () => {
             
           }}
         />
+        <Tab.Screen
+        name="Notifications"
+        component={NotificationScreen}
+        options={{
+          tabBarLabel: 'Contacts',
+          tabBarIcon: ({color}) => (
+            <Ionicons name="notifications" color={color} size={24} />),
+        }}
+      />
         <Tab.Screen
         name="Tracking"
         component={TrackingScreen}
