@@ -4,9 +4,11 @@ import {
   View,
   Platform,
   Text,
+  PermissionsAndroid,
   Button
 } from 'react-native';
 import MapView, { Heatmap, PROVIDER_GOOGLE, Marker, Callout, Polygon } from 'react-native-maps';
+import Geolocation from 'react-native-geolocation-service';
 import { AuthContext } from '../navigation/AuthProvider';
 import auth from '@react-native-firebase/auth';
 import { firebase } from '@react-native-firebase/database';
