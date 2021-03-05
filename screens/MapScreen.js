@@ -141,6 +141,8 @@ export default class HeatMap extends Component {
     if (async () => {
       await this.hasLocationPermission;}) {
         // when the user first opens this screen get the location
+    if (async () => {
+          await this.getData;}) 
       this.mainLoop();
     }
   };
@@ -264,7 +266,10 @@ export default class HeatMap extends Component {
     
     this.state = {
       count:0,
-      mapArr: [],
+      mapArr: [{latitude: 0,
+        longitude: 0,
+        weight: 0}
+    ],
       markerArr: [],
       initialPosition: {
         latitude: 39.7453,//40
@@ -326,52 +331,7 @@ export default class HeatMap extends Component {
   };
 
 
-  points = [
-    
-    /*{ latitude: 39.7828, longitude: -105.0065, weight: .01 },
-    { latitude: 40.7121, longitude: -105.0042, weight: .90},
-    { latitude: 39.7102, longitude: -105.0060, weight: .80 },
-    { latitude: 39.7123, longitude: -105.0052, weight: .70 },
-    { latitude: 39.7032, longitude: -105.0042, weight: .60},
-    { latitude: 39.7198, longitude: -105.0024, weight: .50 },
-    { latitude: 40.7223, longitude: -105.0053, weight: .40},
-    { latitude: 39.7181, longitude: -105.0042, weight: .30 },
-    { latitude: 39.7124, longitude: -105.0023, weight: .20 },
-    { latitude: 39.7648, longitude: -105.0012, weight: .10 },
-    { latitude: 40.7128, longitude: -105.0027, weight: .10},
-    { latitude: 39.7223, longitude: -105.0153, weight: .70},
-    { latitude: 39.7193, longitude: -105.0052, weight: .90 },
-    { latitude: 39.7241, longitude: -105.0013, weight: .80 },
-    { latitude: 40.7518, longitude: -105.0085, weight: .70},
-    { latitude: 39.7599, longitude: -105.0093, weight: .60 },
-    { latitude: 40.7523, longitude: -105.0021, weight: .50},
-    { latitude: 39.7342, longitude: -105.0152, weight: .40 },
-    { latitude: 39.7484, longitude: -106.0042, weight: .30 },
-    { latitude: 39.7929, longitude: -106.0023, weight: .20},
-    { latitude: 39.7292, longitude: -105.0013, weight: .10 },
-    { latitude: 39.7940, longitude: -105.0048, weight: .10},
-    { latitude: 39.7874, longitude: -105.0052, weight: .70 },
-    { latitude: 39.7824, longitude: -105.0024, weight: .90 },
-    { latitude: 39.7232, longitude: -105.0094, weight: .80 },
-    { latitude: 40.7342, longitude: -105.0152, weight: .70 },
-    { latitude: 40.7484, longitude: -105.0012, weight: .60},
-    { latitude: 40.7929, longitude: -105.0073, weight: .50 },
-    { latitude: 40.7292, longitude: -105.0013, weight: .40 },
-    { latitude: 40.7940, longitude: -105.0058, weight: .30 },
-    { latitude: 40.7874, longitude: -105.0352, weight: .20},
-    { latitude: 40.7824, longitude: -105.0024, weight: .10},
-    { latitude: 40.7232, longitude: -105.0094, weight: .10},
-    { latitude: 40.0342, longitude: -106.0152, weight: .20 },
-    { latitude: 40.0484, longitude: -106.0012, weight: .90 },
-    { latitude: 40.0929, longitude: -106.0073, weight: .80 },
-    { latitude: 40.0292, longitude: -105.0013, weight: .70 },
-    { latitude: 40.0940, longitude: -105.0068, weight: .60 },
-    { latitude: 40.0874, longitude: -105.0052, weight: .50},
-    { latitude: 40.0824, longitude: -105.0024, weight: .40 },
-    { latitude: 40.0232, longitude: -105.0014, weight: .30}*/
-
-  ];
-  getData = () => {
+  getData = async () => {
     this.setState({'mapArr': []});
     //mapArr = [];
     this.setState({'count': this.state.count + 1});
