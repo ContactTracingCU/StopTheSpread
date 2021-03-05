@@ -50,15 +50,6 @@ const AppStack = () => {
         }}
       />
         <Tab.Screen
-        name="Tracking"
-        component={TrackingScreen}
-        options={{
-          tabBarLabel: 'Tracking',
-          tabBarIcon: ({color}) => (
-            <Ionicons name="navigate" color={color} size={24} />),
-        }}
-      />
-        <Tab.Screen
           name="Map"
           component={MapScreen}
           options={{
