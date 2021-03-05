@@ -49,7 +49,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA441sjdQVkQDCDO8Z4XdNTxmgn-Ah9fzw" /> <!-- You will also only need to add this uses-library tag -->
+            android:value="AIzaSyBzU31A9dfN_ab0192yzvl7bk2gRdFTpzo" /> <!-- You will also only need to add this uses-library tag -->
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />

@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Starfall\\Documents\\GitHub\\StopTheSpread\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr\\values-fr.xml",
+            "outputFile": "/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Starfall\\.gradle\\caches\\transforms-2\\files-2.1\\d2974ac36bf11b6e048576ef94732df8\\appcompat-1.1.0\\res\\values-fr\\values-fr.xml",
+                    "source": "/Users/myhaoho/.gradle/caches/transforms-2/files-2.1/f354410efc6d31bf6f176e41e7798cf0/core-1.2.0/res/values-fr/values-fr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "5824",
+                        "endColumns": "100",
+                        "endOffsets": "5920"
+                    }
+                },
+                {
+                    "source": "/Users/myhaoho/.gradle/caches/transforms-2/files-2.1/d2974ac36bf11b6e048576ef94732df8/appcompat-1.1.0/res/values-fr/values-fr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Starfall\\.gradle\\caches\\transforms-2\\files-2.1\\c4fb6b3249f446fdb0995f0c1cd7339f\\play-services-base-17.1.0\\res\\values-fr\\values.xml",
+                    "source": "/Users/myhaoho/.gradle/caches/transforms-2/files-2.1/e92562c21dcb56cdd433f044841ee6ea/play-services-base-17.5.0/res/values-fr/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Starfall\\.gradle\\caches\\transforms-2\\files-2.1\\a1273b2256f7ba5cde8be82b028be699\\jetified-play-services-basement-17.1.1\\res\\values-fr\\values.xml",
+                    "source": "/Users/myhaoho/.gradle/caches/transforms-2/files-2.1/4bc34fed0aae54c3fcb3a56d79920ab3/jetified-play-services-basement-17.5.0/res/values-fr/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -52,23 +69,6 @@
                         "startOffsets": "4068",
                         "endColumns": "223",
                         "endOffsets": "4287"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Starfall\\.gradle\\caches\\transforms-2\\files-2.1\\9a4658afade2e57b9a640b6674c28496\\core-1.1.0\\res\\values-fr\\values-fr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5824",
-                        "endColumns": "100",
-                        "endOffsets": "5920"
                     }
                 }
             ]

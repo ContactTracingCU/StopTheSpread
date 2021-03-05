@@ -697,7 +697,40 @@ public final class R {
     public static final class id {
         private id() {}
 
+        public static final int accessibility_action_clickable_span = 0x7f08000a;
         public static final int accessibility_actions = 0x7f08000b;
+        public static final int accessibility_custom_action_0 = 0x7f08000c;
+        public static final int accessibility_custom_action_1 = 0x7f08000d;
+        public static final int accessibility_custom_action_10 = 0x7f08000e;
+        public static final int accessibility_custom_action_11 = 0x7f08000f;
+        public static final int accessibility_custom_action_12 = 0x7f080010;
+        public static final int accessibility_custom_action_13 = 0x7f080011;
+        public static final int accessibility_custom_action_14 = 0x7f080012;
+        public static final int accessibility_custom_action_15 = 0x7f080013;
+        public static final int accessibility_custom_action_16 = 0x7f080014;
+        public static final int accessibility_custom_action_17 = 0x7f080015;
+        public static final int accessibility_custom_action_18 = 0x7f080016;
+        public static final int accessibility_custom_action_19 = 0x7f080017;
+        public static final int accessibility_custom_action_2 = 0x7f080018;
+        public static final int accessibility_custom_action_20 = 0x7f080019;
+        public static final int accessibility_custom_action_21 = 0x7f08001a;
+        public static final int accessibility_custom_action_22 = 0x7f08001b;
+        public static final int accessibility_custom_action_23 = 0x7f08001c;
+        public static final int accessibility_custom_action_24 = 0x7f08001d;
+        public static final int accessibility_custom_action_25 = 0x7f08001e;
+        public static final int accessibility_custom_action_26 = 0x7f08001f;
+        public static final int accessibility_custom_action_27 = 0x7f080020;
+        public static final int accessibility_custom_action_28 = 0x7f080021;
+        public static final int accessibility_custom_action_29 = 0x7f080022;
+        public static final int accessibility_custom_action_3 = 0x7f080023;
+        public static final int accessibility_custom_action_30 = 0x7f080024;
+        public static final int accessibility_custom_action_31 = 0x7f080025;
+        public static final int accessibility_custom_action_4 = 0x7f080026;
+        public static final int accessibility_custom_action_5 = 0x7f080027;
+        public static final int accessibility_custom_action_6 = 0x7f080028;
+        public static final int accessibility_custom_action_7 = 0x7f080029;
+        public static final int accessibility_custom_action_8 = 0x7f08002a;
+        public static final int accessibility_custom_action_9 = 0x7f08002b;
         public static final int accessibility_hint = 0x7f08002c;
         public static final int accessibility_label = 0x7f08002d;
         public static final int accessibility_role = 0x7f08002e;
@@ -744,6 +777,7 @@ public final class R {
         public static final int dark = 0x7f080069;
         public static final int decor_content_parent = 0x7f08006b;
         public static final int default_activity_button = 0x7f08006c;
+        public static final int dialog_button = 0x7f080072;
         public static final int edit_query = 0x7f080075;
         public static final int end = 0x7f080076;
         public static final int expand_activities_button = 0x7f08007a;
@@ -820,6 +854,11 @@ public final class R {
         public static final int submenuarrow = 0x7f080110;
         public static final int submit_area = 0x7f080111;
         public static final int tabMode = 0x7f080112;
+        public static final int tag_accessibility_actions = 0x7f080113;
+        public static final int tag_accessibility_clickable_spans = 0x7f080114;
+        public static final int tag_accessibility_heading = 0x7f080115;
+        public static final int tag_accessibility_pane_title = 0x7f080116;
+        public static final int tag_screen_reader_focusable = 0x7f080117;
         public static final int tag_transition_group = 0x7f080118;
         public static final int tag_unhandled_key_event_manager = 0x7f080119;
         public static final int tag_unhandled_key_listeners = 0x7f08011a;
@@ -883,6 +922,7 @@ public final class R {
         public static final int abc_search_view = 0x7f0b0019;
         public static final int abc_select_dialog_material = 0x7f0b001a;
         public static final int abc_tooltip = 0x7f0b001b;
+        public static final int custom_dialog = 0x7f0b001f;
         public static final int dev_loading_view = 0x7f0b002f;
         public static final int fps_view = 0x7f0b0030;
         public static final int notification_action = 0x7f0b004d;
