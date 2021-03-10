@@ -295,10 +295,10 @@ export default class HeatMap extends Component {
       mapArr: [{ latitude: -76.299965, longitude: -148.003021, weight: 100 }], //must have initial coords for android (else throws no points error). this is antartica
       markerArr: [],
       initialPosition: {
-        latitude: 39.7453, //40
-        longitude: -105.0007, //-74
-        latitudeDelta: 0.09,
-        longitudeDelta: 0.035,
+        latitude: 41.5, //40
+        longitude: -100.0, //-74
+        latitudeDelta: 50,
+        longitudeDelta: 50,
       },
       markerInit: {
         latitude: 39.7453,
@@ -421,8 +421,8 @@ export default class HeatMap extends Component {
     this.setState({
       mapArr: [{ latitude: -76.299965, longitude: -148.003021, weight: 100 }], ////must have initial coords for android (else throws no points error). this is antartica
     });
-    //mapArr = [];
-    this.setState({ count: this.state.count + 1 });
+    // //mapArr = [];
+    // this.setState({ count: this.state.count + 1 });
     db.ref("users")
       .limitToFirst(100)
       .once("value")
@@ -473,16 +473,43 @@ export default class HeatMap extends Component {
               uID: userID,
             };
 
+            //check if mapArr contains the same object to avoid rerendering duplicates; only works if weight is not changed, else a new object to mapArr with same coords but differnt weight
+            // if (
+            //   this.state.mapArr.some(
+            //     (e) =>
+            //       e.latitude === mapObj.latitude &&
+            //       e.longitude === mapObj.longitude &&
+            //       e.weight === mapObj.weight
+            //   )
+            // ) {
+            //   /* mapArr contains a duplicate obj */
+            //   continue;
+            // } else if (
+            //   this.state.mapArr.some(
+            //     (e, i, t) =>
+            //       e.latitude === mapObj.latitude &&
+            //       e.longitude === mapObj.longitude &&
+            //       e.weight != mapObj.weight
+            //   )
+            // ) {
+            //   this.state.mapArr[i][weight] = mapObj.weight;
+            // } else {
+            //   //this object retrieved from database is unique compared to objects in mapArr
+            //   //this.state.mapArr.push(mapObj);
+            //   this.setState({ mapArr: [...this.state.mapArr, mapObj] }); //simple value
+            // }
             //this.state.mapArr.push(mapObj);
             this.setState({ mapArr: [...this.state.mapArr, mapObj] }); //simple value
             this.setState({ markerArr: [...this.state.markerArr, markerObj] });
-            //mapArr.push(mapObj);
           }
         } catch (e) {
           console.log(e);
         }
       }); //then
-    console.log("in mappArr state", this.state.mapArr.length); // prints 1 on first try since this is outside of promise/async function
+    console.log(
+      "in getData() and length of mapArr = ",
+      this.state.mapArr.length
+    ); // prints 1 on first try since this is outside of promise/async function
 
     ////
     ////this cause to not update on first pressed because we are assigning a non-state points array
@@ -534,22 +561,25 @@ export default class HeatMap extends Component {
           initialRegion={this.state.initialPosition}
           minZoomLevel={0} // default => 0
           maxZoomLevel={14} // default => 20
+          loadingEnabled={true}
+          loadingIndicatorColor={"#a6e4d0"}
+          onRegionChangeComplete={this.getData}
+          showsIndoorLevelPicker={true}
         >
           <Heatmap
             points={this.state.mapArr}
-            radius={40}
+            radius={Platform.OS === "ios" ? 40 : 20}
             opacity={1}
             gradient={{
               colors: ["green", "orange", "red"],
-              startPoints:
-                Platform.OS === "iOS" ? [0.05, 0.2, 0.5] : [0.05, 0.2, 0.5],
+              startPoints: [0.05, 0.2, 0.5],
               colorMapSize: 2000,
             }}
           ></Heatmap>
         </MapView>
-        <View style={styles.bottomView}>
+        {/* <View style={styles.bottomView}>
           <ProgressButton onPress={this.getData} />
-        </View>
+        </View> */}
       </View>
     );
   }

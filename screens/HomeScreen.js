@@ -1,10 +1,5 @@
-import React, { useState, useContext, useCallback } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-} from "react-native";
+import React, { useState, useContext, useCallback, useEffect } from "react";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 
 //custom components
 import FormButton from "../components/FormButton";
@@ -31,23 +26,31 @@ const HomeScreen = ({ navigation }) => {
     logout,
     setUserInfectionStatus,
     isEnabled,
-    toggleSwitch
+    toggleSwitch,
   } = useContext(AuthContext);
   const sheetRef = React.useRef(null);
 
   //force rerender
   const [, updateState] = useState();
+  const forceUpdate = useCallback(() => updateState({}), []);
 
   // set up to hide settings button
-  const [shouldShow, setShouldShow] = useState(true);
+  // const [shouldShow, setShouldShow] = useState(true);
 
   // set up to get state of switch
   //const [isEnabled, setIsEnabled] = useState(false);
   //const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
   const clickHandler = (s) => {
-    setInfectStatus(s);
+    setCount(s);
   };
+
+  const [firstRender, setFirstRender] = useState(false);
+  let re = false;
+  // //same as component did mount
+  // useEffect(() => {
+  //   setFirstRender(true);
+  // }, []);
 
   // set up render content for bottom sheet
   const renderContent = () => (
@@ -66,7 +69,7 @@ const HomeScreen = ({ navigation }) => {
         buttonTitle="Negative/No Symptoms"
         onPress={() => {
           sheetRef.current.snapTo(0);
-          clickHandler("Negative");
+          //clickHandler("Negative");
           return setUserInfectionStatus("N");
         }}
       />
@@ -75,7 +78,7 @@ const HomeScreen = ({ navigation }) => {
         buttonTitle="Symptoms"
         onPress={() => {
           sheetRef.current.snapTo(0);
-          clickHandler("Symptomatic");
+          //clickHandler("Symptomatic");
           return setUserInfectionStatus("M");
         }}
       />
@@ -84,7 +87,7 @@ const HomeScreen = ({ navigation }) => {
         buttonTitle="Positive"
         onPress={() => {
           sheetRef.current.snapTo(0);
-          clickHandler("Positive");
+          //clickHandler("Positive");
           return setUserInfectionStatus("P");
         }}
       />
@@ -103,54 +106,66 @@ const HomeScreen = ({ navigation }) => {
         </SafeAreaView>
       </View>
 
-      <SlidingUpPanel
-        ref={(c) => (this._panel = c)}
-        allowDragging={false}
-        backdropStyle={styles.backdropStyle}
-        onBottomReached={() => {
-          setShouldShow(!shouldShow);
-          sheetRef.current.snapTo(0);
-        }}
-      >
-        <View style={styles.container} onStartShouldSetResponder={() => this._panel.hide()}>
-          <View style={styles.toggleLocationView}>
-            <Text style={styles.toggleLocationText}>Location Services</Text>
-            <Switch
-              style={styles.toggleLocationSwitch}
-              trackColor={{ false: "#767577", true: "#a6e4d0" }}
-              thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-              onValueChange={toggleSwitch}
-              value={isEnabled}
-            />
-          </View>
-          <View style={styles.buttons}>
-            <Report
-              buttonTitle="Report"
-              // on press snap to position in snapPoins list
-              onPress={() => sheetRef.current.snapTo(1)}
-            />
-
-            <FormButton
-              buttonTitle="Logout"
-              onPress={() => {
-                return logout();
-              }}
-            />
-          </View>
-        </View>
-      </SlidingUpPanel>
-
       <View style={styles.settingsButton}>
-        {shouldShow ? (
-          <SettingsButton
-            buttonTitle="Settings"
-            onPress={() => {
+        <SettingsButton
+          buttonTitle="Settings"
+          onPress={() => {
+            if(!firstRender){
+              setFirstRender(true);
+              return
+            }
+            try {
               this._panel.show();
-              setShouldShow(!shouldShow);
-            }}
-          />
-        ) : null}
+            } catch (e) {
+              console.log(e);
+            }
+
+            // setShouldShow(!shouldShow);
+          }}
+        />
       </View>
+
+      {firstRender && (
+        <SlidingUpPanel
+          ref={(c) => (this._panel = c)}
+          allowDragging={false}
+          backdropStyle={styles.backdropStyle}
+          onBottomReached={() => {
+            // setShouldShow(!shouldShow);
+            sheetRef.current.snapTo(0);
+          }}
+        >
+          <View
+            style={styles.container}
+            onStartShouldSetResponder={() => this._panel.hide()}
+          >
+            <View style={styles.toggleLocationView}>
+              <Text style={styles.toggleLocationText}>Location Services</Text>
+              <Switch
+                style={styles.toggleLocationSwitch}
+                trackColor={{ false: "#767577", true: "#a6e4d0" }}
+                thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+                onValueChange={toggleSwitch}
+                value={isEnabled}
+              />
+            </View>
+            <View style={styles.buttons}>
+              <Report
+                buttonTitle="Report"
+                // on press snap to position in snapPoins list
+                onPress={() => sheetRef.current.snapTo(1)}
+              />
+
+              <FormButton
+                buttonTitle="Logout"
+                onPress={() => {
+                  return logout();
+                }}
+              />
+            </View>
+          </View>
+        </SlidingUpPanel>
+      )}
 
       <BottomSheet
         ref={sheetRef}
@@ -167,8 +182,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center",
   },
   text: {
     fontSize: 35,
@@ -194,14 +209,14 @@ const styles = StyleSheet.create({
     margin: -166,
   },
   toggleLocationView: {
-    marginLeft:"-80%",
-    bottom:250
+    marginLeft: "-80%",
+    bottom: 250,
   },
   toggleLocationText: {
     color: "white",
     fontWeight: "bold",
     fontSize: 25,
-    position: 'absolute'
+    position: "absolute",
   },
   toggleLocationSwitch: {
     marginLeft: "35%",
