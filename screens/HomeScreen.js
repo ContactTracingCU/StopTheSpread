@@ -128,8 +128,9 @@ const HomeScreen = ({ navigation }) => {
       {firstRender && (
         <SlidingUpPanel
           ref={(c) => (this._panel = c)}
-          allowDragging={false}
+          allowDragging={true}
           backdropStyle={styles.backdropStyle}
+          friction={0}
           onBottomReached={() => {
             // setShouldShow(!shouldShow);
             sheetRef.current.snapTo(0);
@@ -217,10 +218,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 25,
     position: "absolute",
+    marginLeft: '45%'
   },
   toggleLocationSwitch: {
-    marginRight: "-50%",
-    position: "relative",
+    marginLeft: '80%'
   },
   settingsButton: {
     paddingBottom: 20,
