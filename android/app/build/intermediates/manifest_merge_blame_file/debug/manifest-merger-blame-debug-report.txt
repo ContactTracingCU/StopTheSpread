@@ -9,246 +9,246 @@
 9        android:targetSdkVersion="29" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/debug/AndroidManifest.xml:5:5-77
-11-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/debug/AndroidManifest.xml:5:22-75
+11-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\debug\AndroidManifest.xml:5:5-77
+11-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\debug\AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:4:5-67
-12-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:4:22-64
+12-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:4:5-67
+12-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:4:22-64
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:5:5-81
-13-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:5:22-78
+13-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:5:5-81
+13-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:5:22-78
 14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-14-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:6:5-79
-14-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:6:22-76
+14-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:6:5-79
+14-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:6:22-76
 15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-15-->[com.facebook.flipper:flipper:0.54.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/da73bf2eac3b39390219acede4507127/flipper-0.54.0/AndroidManifest.xml:16:5-76
-15-->[com.facebook.flipper:flipper:0.54.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/da73bf2eac3b39390219acede4507127/flipper-0.54.0/AndroidManifest.xml:16:22-73
+15-->[com.facebook.flipper:flipper:0.54.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\da73bf2eac3b39390219acede4507127\flipper-0.54.0\AndroidManifest.xml:16:5-76
+15-->[com.facebook.flipper:flipper:0.54.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\da73bf2eac3b39390219acede4507127\flipper-0.54.0\AndroidManifest.xml:16:22-73
 16    <uses-permission android:name="android.permission.WAKE_LOCK" />
-16-->[:react-native-firebase_auth] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
-16-->[:react-native-firebase_auth] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
+16-->[:react-native-firebase_auth] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-firebase\auth\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-68
+16-->[:react-native-firebase_auth] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-firebase\auth\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-65
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->[:react-native-firebase_auth] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
-17-->[:react-native-firebase_auth] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-76
+17-->[:react-native-firebase_auth] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-firebase\auth\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-79
+17-->[:react-native-firebase_auth] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-firebase\auth\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-76
 18
 19    <uses-feature
-19-->[com.google.android.gms:play-services-maps:17.0.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/78f0a0a09f1bb14a3a2d04220894e2dc/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\78f0a0a09f1bb14a3a2d04220894e2dc\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
 20        android:glEsVersion="0x00020000"
-20-->[com.google.android.gms:play-services-maps:17.0.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/78f0a0a09f1bb14a3a2d04220894e2dc/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+20-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\78f0a0a09f1bb14a3a2d04220894e2dc\play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
 21        android:required="true" />
-21-->[com.google.android.gms:play-services-maps:17.0.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/78f0a0a09f1bb14a3a2d04220894e2dc/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+21-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\78f0a0a09f1bb14a3a2d04220894e2dc\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 22
 23    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-23-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:26:5-110
-23-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:26:22-107
+23-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:26:5-110
+23-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:26:22-107
 24
 25    <application
-25-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:8:5-33:19
+25-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:8:5-33:19
 26        android:name="com.stsnew.MainApplication"
-26-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:9:7-38
+26-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:9:7-38
 27        android:allowBackup="false"
-27-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:13:7-34
+27-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:13:7-34
 28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-28-->[androidx.core:core:1.2.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/f354410efc6d31bf6f176e41e7798cf0/core-1.2.0/AndroidManifest.xml:24:18-86
+28-->[androidx.core:core:1.2.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\f354410efc6d31bf6f176e41e7798cf0\core-1.2.0\AndroidManifest.xml:24:18-86
 29        android:debuggable="true"
 30        android:icon="@mipmap/ic_launcher"
-30-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:11:7-41
+30-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:11:7-41
 31        android:label="@string/app_name"
-31-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:10:7-39
+31-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:10:7-39
 32        android:roundIcon="@mipmap/ic_launcher_round"
-32-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:12:7-52
+32-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:12:7-52
 33        android:theme="@style/AppTheme"
-33-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:14:7-38
+33-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:14:7-38
 34        android:usesCleartextTraffic="true" >
-34-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/debug/AndroidManifest.xml:7:18-53
+34-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\debug\AndroidManifest.xml:7:18-53
 35        <activity
-35-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:15:7-25:18
+35-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:15:7-25:18
 36            android:name="com.stsnew.MainActivity"
-36-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:16:9-37
+36-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:16:9-37
 37            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-37-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:18:9-86
+37-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:18:9-86
 38            android:label="@string/app_name"
-38-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:17:9-41
+38-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:17:9-41
 39            android:launchMode="singleTask"
-39-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:19:9-40
+39-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:19:9-40
 40            android:windowSoftInputMode="adjustResize" >
-40-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:20:9-51
+40-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:20:9-51
 41            <intent-filter>
-41-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:21:9-24:25
+41-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:21:9-24:25
 42                <action android:name="android.intent.action.MAIN" />
-42-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:22:13-65
-42-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:22:21-62
+42-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:22:13-65
+42-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:22:21-62
 43
 44                <category android:name="android.intent.category.LAUNCHER" />
-44-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:23:13-73
-44-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:23:23-70
+44-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:23:13-73
+44-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:23:23-70
 45            </intent-filter>
 46        </activity>
 47        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-47-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:26:7-84
-47-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:26:17-81
+47-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:26:7-84
+47-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:26:17-81
 48
 49        <meta-data
-49-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:27:2-29:64
+49-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:27:2-29:64
 50            android:name="com.google.android.geo.API_KEY"
-50-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:28:7-52
+50-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:28:7-52
 51            android:value="AIzaSyBzU31A9dfN_ab0192yzvl7bk2gRdFTpzo" /> <!-- You will also only need to add this uses-library tag -->
-51-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:29:7-62
+51-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:29:7-62
 52        <uses-library
-52-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:32:4-82
+52-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:32:4-82
 53            android:name="org.apache.http.legacy"
-53-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:32:18-55
+53-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:32:18-55
 54            android:required="false" />
-54-->/Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/src/main/AndroidManifest.xml:32:56-80
+54-->C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\src\main\AndroidManifest.xml:32:56-80
 55
 56        <provider
-56-->[:react-native-webview] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+56-->[:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
 57            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-57-->[:react-native-webview] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+57-->[:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
 58            android:authorities="com.stsnew.fileprovider"
-58-->[:react-native-webview] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+58-->[:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
 59            android:exported="false"
-59-->[:react-native-webview] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+59-->[:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
 60            android:grantUriPermissions="true" >
-60-->[:react-native-webview] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+60-->[:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
 61            <meta-data
-61-->[:react-native-webview] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+61-->[:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-19:63
 62                android:name="android.support.FILE_PROVIDER_PATHS"
-62-->[:react-native-webview] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+62-->[:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-67
 63                android:resource="@xml/file_provider_paths" />
-63-->[:react-native-webview] /Users/myhaoho/Documents/GitHub/StopTheSpread/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+63-->[:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:17-60
 64        </provider>
 65
 66        <activity
-66-->[com.google.android.gms:play-services-auth:18.1.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/417cd6b002d4424cfc58e4ad88ce24b6/play-services-auth-18.1.0/AndroidManifest.xml:23:9-27:75
+66-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\417cd6b002d4424cfc58e4ad88ce24b6\play-services-auth-18.1.0\AndroidManifest.xml:23:9-27:75
 67            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-67-->[com.google.android.gms:play-services-auth:18.1.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/417cd6b002d4424cfc58e4ad88ce24b6/play-services-auth-18.1.0/AndroidManifest.xml:24:13-93
+67-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\417cd6b002d4424cfc58e4ad88ce24b6\play-services-auth-18.1.0\AndroidManifest.xml:24:13-93
 68            android:excludeFromRecents="true"
-68-->[com.google.android.gms:play-services-auth:18.1.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/417cd6b002d4424cfc58e4ad88ce24b6/play-services-auth-18.1.0/AndroidManifest.xml:25:13-46
+68-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\417cd6b002d4424cfc58e4ad88ce24b6\play-services-auth-18.1.0\AndroidManifest.xml:25:13-46
 69            android:exported="false"
-69-->[com.google.android.gms:play-services-auth:18.1.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/417cd6b002d4424cfc58e4ad88ce24b6/play-services-auth-18.1.0/AndroidManifest.xml:26:13-37
+69-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\417cd6b002d4424cfc58e4ad88ce24b6\play-services-auth-18.1.0\AndroidManifest.xml:26:13-37
 70            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-70-->[com.google.android.gms:play-services-auth:18.1.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/417cd6b002d4424cfc58e4ad88ce24b6/play-services-auth-18.1.0/AndroidManifest.xml:27:13-72
+70-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\417cd6b002d4424cfc58e4ad88ce24b6\play-services-auth-18.1.0\AndroidManifest.xml:27:13-72
 71        <!--
 72            Service handling Google Sign-In user revocation. For apps that do not integrate with
 73            Google Sign-In, this service will never be started.
 74        -->
 75        <service
-75-->[com.google.android.gms:play-services-auth:18.1.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/417cd6b002d4424cfc58e4ad88ce24b6/play-services-auth-18.1.0/AndroidManifest.xml:33:9-37:51
+75-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\417cd6b002d4424cfc58e4ad88ce24b6\play-services-auth-18.1.0\AndroidManifest.xml:33:9-37:51
 76            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-76-->[com.google.android.gms:play-services-auth:18.1.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/417cd6b002d4424cfc58e4ad88ce24b6/play-services-auth-18.1.0/AndroidManifest.xml:34:13-89
+76-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\417cd6b002d4424cfc58e4ad88ce24b6\play-services-auth-18.1.0\AndroidManifest.xml:34:13-89
 77            android:exported="true"
-77-->[com.google.android.gms:play-services-auth:18.1.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/417cd6b002d4424cfc58e4ad88ce24b6/play-services-auth-18.1.0/AndroidManifest.xml:35:13-36
+77-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\417cd6b002d4424cfc58e4ad88ce24b6\play-services-auth-18.1.0\AndroidManifest.xml:35:13-36
 78            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-78-->[com.google.android.gms:play-services-auth:18.1.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/417cd6b002d4424cfc58e4ad88ce24b6/play-services-auth-18.1.0/AndroidManifest.xml:36:13-107
+78-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\417cd6b002d4424cfc58e4ad88ce24b6\play-services-auth-18.1.0\AndroidManifest.xml:36:13-107
 79            android:visibleToInstantApps="true" />
-79-->[com.google.android.gms:play-services-auth:18.1.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/417cd6b002d4424cfc58e4ad88ce24b6/play-services-auth-18.1.0/AndroidManifest.xml:37:13-48
+79-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\417cd6b002d4424cfc58e4ad88ce24b6\play-services-auth-18.1.0\AndroidManifest.xml:37:13-48
 80
 81        <activity
-81-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:24:9-31:50
+81-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
 82            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-82-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:25:13-85
+82-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:25:13-85
 83            android:excludeFromRecents="true"
-83-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:26:13-46
+83-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:26:13-46
 84            android:exported="true"
-84-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:27:13-36
+84-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:27:13-36
 85            android:launchMode="singleTask"
-85-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:28:13-44
+85-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:28:13-44
 86            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-86-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:29:13-102
+86-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:29:13-102
 87            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-87-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:30:13-72
+87-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:30:13-72
 88
 89        <service
-89-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:33:9-39:19
+89-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:33:9-39:19
 90            android:name="com.google.firebase.components.ComponentDiscoveryService"
-90-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:34:13-84
+90-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:34:13-84
 91            android:directBootAware="true"
-91-->[com.google.firebase:firebase-common:19.3.1] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/c9518fe5cda6c89be093abe182bbb624/jetified-firebase-common-19.3.1/AndroidManifest.xml:35:13-43
+91-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d859cd0d9a37f8c419f3fc363ab26b0e\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
 92            android:exported="false" >
-92-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:35:13-37
+92-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:35:13-37
 93            <meta-data
-93-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:36:13-38:85
+93-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:36:13-38:85
 94                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-94-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:37:17-109
+94-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:37:17-109
 95                android:value="com.google.firebase.components.ComponentRegistrar" />
-95-->[com.google.firebase:firebase-auth:19.4.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/1ca69443cd8465e24be8f43e29bdafce/firebase-auth-19.4.0/AndroidManifest.xml:38:17-82
+95-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\1ca69443cd8465e24be8f43e29bdafce\firebase-auth-19.4.0\AndroidManifest.xml:38:17-82
 96            <meta-data
-96-->[com.google.firebase:firebase-database:19.5.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/e6d8c9e8cf60271e1df07c0df1f77b1b/firebase-database-19.5.0/AndroidManifest.xml:32:13-34:85
+96-->[com.google.firebase:firebase-database:19.5.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\e6d8c9e8cf60271e1df07c0df1f77b1b\firebase-database-19.5.0\AndroidManifest.xml:32:13-34:85
 97                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-97-->[com.google.firebase:firebase-database:19.5.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/e6d8c9e8cf60271e1df07c0df1f77b1b/firebase-database-19.5.0/AndroidManifest.xml:33:17-109
+97-->[com.google.firebase:firebase-database:19.5.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\e6d8c9e8cf60271e1df07c0df1f77b1b\firebase-database-19.5.0\AndroidManifest.xml:33:17-109
 98                android:value="com.google.firebase.components.ComponentRegistrar" />
-98-->[com.google.firebase:firebase-database:19.5.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/e6d8c9e8cf60271e1df07c0df1f77b1b/firebase-database-19.5.0/AndroidManifest.xml:34:17-82
+98-->[com.google.firebase:firebase-database:19.5.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\e6d8c9e8cf60271e1df07c0df1f77b1b\firebase-database-19.5.0\AndroidManifest.xml:34:17-82
 99            <meta-data
-99-->[com.google.android.gms:play-services-measurement-api:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/156df2eac9fa9df701bb6de8b807d36c/play-services-measurement-api-17.6.0/AndroidManifest.xml:30:13-32:85
+99-->[com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\156df2eac9fa9df701bb6de8b807d36c\play-services-measurement-api-17.6.0\AndroidManifest.xml:30:13-32:85
 100                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-100-->[com.google.android.gms:play-services-measurement-api:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/156df2eac9fa9df701bb6de8b807d36c/play-services-measurement-api-17.6.0/AndroidManifest.xml:31:17-139
+100-->[com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\156df2eac9fa9df701bb6de8b807d36c\play-services-measurement-api-17.6.0\AndroidManifest.xml:31:17-139
 101                android:value="com.google.firebase.components.ComponentRegistrar" />
-101-->[com.google.android.gms:play-services-measurement-api:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/156df2eac9fa9df701bb6de8b807d36c/play-services-measurement-api-17.6.0/AndroidManifest.xml:32:17-82
+101-->[com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\156df2eac9fa9df701bb6de8b807d36c\play-services-measurement-api-17.6.0\AndroidManifest.xml:32:17-82
 102            <meta-data
-102-->[com.google.firebase:firebase-installations:16.3.2] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/791c9e28d0d90147a5dca4bd0d3e1256/firebase-installations-16.3.2/AndroidManifest.xml:17:13-19:85
+102-->[com.google.firebase:firebase-installations:16.3.2] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\791c9e28d0d90147a5dca4bd0d3e1256\firebase-installations-16.3.2\AndroidManifest.xml:17:13-19:85
 103                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-103-->[com.google.firebase:firebase-installations:16.3.2] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/791c9e28d0d90147a5dca4bd0d3e1256/firebase-installations-16.3.2/AndroidManifest.xml:18:17-127
+103-->[com.google.firebase:firebase-installations:16.3.2] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\791c9e28d0d90147a5dca4bd0d3e1256\firebase-installations-16.3.2\AndroidManifest.xml:18:17-127
 104                android:value="com.google.firebase.components.ComponentRegistrar" />
-104-->[com.google.firebase:firebase-installations:16.3.2] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/791c9e28d0d90147a5dca4bd0d3e1256/firebase-installations-16.3.2/AndroidManifest.xml:19:17-82
+104-->[com.google.firebase:firebase-installations:16.3.2] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\791c9e28d0d90147a5dca4bd0d3e1256\firebase-installations-16.3.2\AndroidManifest.xml:19:17-82
 105        </service>
 106
 107        <activity
-107-->[com.google.android.gms:play-services-base:17.5.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/e92562c21dcb56cdd433f044841ee6ea/play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
+107-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\e92562c21dcb56cdd433f044841ee6ea\play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
 108            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-108-->[com.google.android.gms:play-services-base:17.5.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/e92562c21dcb56cdd433f044841ee6ea/play-services-base-17.5.0/AndroidManifest.xml:24:13-79
+108-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\e92562c21dcb56cdd433f044841ee6ea\play-services-base-17.5.0\AndroidManifest.xml:24:13-79
 109            android:exported="false"
-109-->[com.google.android.gms:play-services-base:17.5.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/e92562c21dcb56cdd433f044841ee6ea/play-services-base-17.5.0/AndroidManifest.xml:25:13-37
+109-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\e92562c21dcb56cdd433f044841ee6ea\play-services-base-17.5.0\AndroidManifest.xml:25:13-37
 110            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-110-->[com.google.android.gms:play-services-base:17.5.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/e92562c21dcb56cdd433f044841ee6ea/play-services-base-17.5.0/AndroidManifest.xml:26:13-72
+110-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\e92562c21dcb56cdd433f044841ee6ea\play-services-base-17.5.0\AndroidManifest.xml:26:13-72
 111
 112        <provider
-112-->[com.google.firebase:firebase-common:19.3.1] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/c9518fe5cda6c89be093abe182bbb624/jetified-firebase-common-19.3.1/AndroidManifest.xml:26:9-31:39
+112-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d859cd0d9a37f8c419f3fc363ab26b0e\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
 113            android:name="com.google.firebase.provider.FirebaseInitProvider"
-113-->[com.google.firebase:firebase-common:19.3.1] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/c9518fe5cda6c89be093abe182bbb624/jetified-firebase-common-19.3.1/AndroidManifest.xml:27:13-77
+113-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d859cd0d9a37f8c419f3fc363ab26b0e\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
 114            android:authorities="com.stsnew.firebaseinitprovider"
-114-->[com.google.firebase:firebase-common:19.3.1] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/c9518fe5cda6c89be093abe182bbb624/jetified-firebase-common-19.3.1/AndroidManifest.xml:28:13-72
+114-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d859cd0d9a37f8c419f3fc363ab26b0e\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
 115            android:directBootAware="true"
-115-->[com.google.firebase:firebase-common:19.3.1] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/c9518fe5cda6c89be093abe182bbb624/jetified-firebase-common-19.3.1/AndroidManifest.xml:29:13-43
+115-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d859cd0d9a37f8c419f3fc363ab26b0e\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
 116            android:exported="false"
-116-->[com.google.firebase:firebase-common:19.3.1] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/c9518fe5cda6c89be093abe182bbb624/jetified-firebase-common-19.3.1/AndroidManifest.xml:30:13-37
+116-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d859cd0d9a37f8c419f3fc363ab26b0e\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
 117            android:initOrder="100" />
-117-->[com.google.firebase:firebase-common:19.3.1] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/c9518fe5cda6c89be093abe182bbb624/jetified-firebase-common-19.3.1/AndroidManifest.xml:31:13-36
+117-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d859cd0d9a37f8c419f3fc363ab26b0e\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
 118
 119        <receiver
-119-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:29:9-33:20
+119-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:29:9-33:20
 120            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-120-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:30:13-85
+120-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:30:13-85
 121            android:enabled="true"
-121-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:31:13-35
+121-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:31:13-35
 122            android:exported="false" >
-122-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:32:13-37
+122-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:32:13-37
 123        </receiver>
 124
 125        <service
-125-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:35:9-38:40
+125-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:35:9-38:40
 126            android:name="com.google.android.gms.measurement.AppMeasurementService"
-126-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:36:13-84
+126-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:36:13-84
 127            android:enabled="true"
-127-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:37:13-35
+127-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:37:13-35
 128            android:exported="false" />
-128-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:38:13-37
+128-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:38:13-37
 129        <service
-129-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:39:9-43:72
+129-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:39:9-43:72
 130            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-130-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:40:13-87
+130-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:40:13-87
 131            android:enabled="true"
-131-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:41:13-35
+131-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:41:13-35
 132            android:exported="false"
-132-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:42:13-37
+132-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:42:13-37
 133            android:permission="android.permission.BIND_JOB_SERVICE" />
-133-->[com.google.android.gms:play-services-measurement:17.6.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/6ad602824357b915c6075deaa31ff0c7/play-services-measurement-17.6.0/AndroidManifest.xml:43:13-69
+133-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\6ad602824357b915c6075deaa31ff0c7\play-services-measurement-17.6.0\AndroidManifest.xml:43:13-69
 134
 135        <meta-data
-135-->[com.google.android.gms:play-services-basement:17.5.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/4bc34fed0aae54c3fcb3a56d79920ab3/jetified-play-services-basement-17.5.0/AndroidManifest.xml:23:9-25:69
+135-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\63316a6f71f13ec76ff34ced74ce8e36\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
 136            android:name="com.google.android.gms.version"
-136-->[com.google.android.gms:play-services-basement:17.5.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/4bc34fed0aae54c3fcb3a56d79920ab3/jetified-play-services-basement-17.5.0/AndroidManifest.xml:24:13-58
+136-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\63316a6f71f13ec76ff34ced74ce8e36\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
 137            android:value="@integer/google_play_services_version" />
-137-->[com.google.android.gms:play-services-basement:17.5.0] /Users/myhaoho/.gradle/caches/transforms-2/files-2.1/4bc34fed0aae54c3fcb3a56d79920ab3/jetified-play-services-basement-17.5.0/AndroidManifest.xml:25:13-66
+137-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\63316a6f71f13ec76ff34ced74ce8e36\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
 138    </application>
 139
 140</manifest>

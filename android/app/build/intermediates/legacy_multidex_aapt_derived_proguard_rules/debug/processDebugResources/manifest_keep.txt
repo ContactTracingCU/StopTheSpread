@@ -1,4 +1,4 @@
-# Referenced at /Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:25
+# Referenced at C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:25
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
-# Referenced at /Users/myhaoho/Documents/GitHub/StopTheSpread/android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:25
+# Referenced at C:\Users\Starfall\Documents\GitHub\StopTheSpread\android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:25
 -keep class com.stsnew.MainApplication { <init>(); }
