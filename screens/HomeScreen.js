@@ -217,6 +217,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 25,
     position: "absolute",
+    // opacity: 1,
   },
   toggleLocationSwitch: {
     marginLeft: "35%",
