@@ -1,5 +1,5 @@
 import React, { useState, useContext, useCallback, useEffect } from "react";
-import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView, Switch } from "react-native";
 
 //custom components
 import FormButton from "../components/FormButton";
@@ -17,7 +17,7 @@ import BottomSheet from "reanimated-bottom-sheet";
 import SlidingUpPanel from "rn-sliding-up-panel";
 import { WebView } from "react-native-webview";
 import SettingsButton from "../components/SettingsButton";
-import { Switch } from "react-native-gesture-handler";
+//import { Switch } from "react-native-gesture-handler";
 
 let iStatus = ""; // must have variable globally(only works for fucntional component) if wished to use to store return values from firebase
 
@@ -219,8 +219,8 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   toggleLocationSwitch: {
-    marginLeft: "35%",
-    position: "absolute",
+    marginRight: "-50%",
+    position: "relative",
   },
   settingsButton: {
     paddingBottom: 20,
