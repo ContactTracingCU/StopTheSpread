@@ -1,5 +1,5 @@
 import React, { useState, useContext, useCallback, useEffect } from "react";
-import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView, Switch } from "react-native";
 
 //custom components
 import FormButton from "../components/FormButton";
@@ -17,7 +17,7 @@ import BottomSheet from "reanimated-bottom-sheet";
 import SlidingUpPanel from "rn-sliding-up-panel";
 import { WebView } from "react-native-webview";
 import SettingsButton from "../components/SettingsButton";
-import { Switch } from "react-native-gesture-handler";
+//import { Switch } from "react-native-gesture-handler";
 
 let iStatus = ""; // must have variable globally(only works for fucntional component) if wished to use to store return values from firebase
 
@@ -128,8 +128,9 @@ const HomeScreen = ({ navigation }) => {
       {firstRender && (
         <SlidingUpPanel
           ref={(c) => (this._panel = c)}
-          allowDragging={false}
+          allowDragging={true}
           backdropStyle={styles.backdropStyle}
+          friction={0}
           onBottomReached={() => {
             // setShouldShow(!shouldShow);
             sheetRef.current.snapTo(0);
@@ -217,11 +218,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 25,
     position: "absolute",
-    // opacity: 1,
+    marginLeft: '45%'
   },
   toggleLocationSwitch: {
-    marginLeft: "35%",
-    position: "absolute",
+    marginLeft: '80%'
   },
   settingsButton: {
     paddingBottom: 20,

@@ -82,7 +82,7 @@ export const AuthProvider = ({ children }) => {
           return iStat;
         },
         setUserLocationInfo: (props) => {
-          if (props.coords.speed < 5) {
+          if (props.coords.speed < 10) {
             pushData = db.ref("users/" + user.uid + "/locationInfo/").update({
               lat: props.coords.latitude,
               long: props.coords.longitude,
@@ -91,7 +91,7 @@ export const AuthProvider = ({ children }) => {
           }
         },
         uploadUserLocation: (props, county) => {
-          if (props.coords.speed < 5) {
+          if (props.coords.speed < 10) {
             //if user is not traveling by motor vehicle, upload their location data.
             pushData = db
               .ref("locations/" + county + "/" + Math.trunc(props.timestamp))

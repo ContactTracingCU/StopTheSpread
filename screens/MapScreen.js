@@ -24,55 +24,14 @@ const db = firebase.app().database("https://sts0-76694.firebaseio.com");
 export default class HeatMap extends Component {
   static contextType = AuthContext;
   watchId = null; //number
-  state = {
-    // variables
-    forceLocation: true, //forcefully request location
-    highAccuracy: true, //use high accuracy mode for gps
-    loading: false, //tracks if app is waiting for location data
-    significantChanges: false, //return locations only if device detects significant change (android only)
-    updatesEnabled: false, //tracks whether location updates is turned on or not
-    timeoute: 15000, //Request timeout
-    maxAge: 10000, //store gps data for this many ms
-    dFilter: 0, //distance filter, don't get gps data if they haven't moved x
-    interv: 15000, //Interval for active location updates (android only)
-    fInterval: 10000, //Fastest rate to receive location updates, which might
-    //be faster than interval in some situations (android only)
-    location: {},
-    latitude: 0,
-    longitude: 0,
-    speed: 0,
-    timestamp: 0,
-    county: null,
-    toggle: false,
-    /*
-      format of location :{
-        "coords": {"accuracy": number,
-                  "altitude": number,
-                  "heading": number,
-                  "latitude": number,
-                  "longitude": number,
-                  "speed": number},
-        "mocked": boolean,
-        "timestamp": 1605936837000
-      }
-      Geolocation.getCurrentPosition(
-            async(position) => {
-              console.log(position);
-
-              //saves current location so app can display it on screen
-              this.setState({ location: position, latitude: position.coords.latitude,  longitude: position.coords.longitude, speed: position.coords.speed, timestamp: position.timestamp });
-              await this.getCounty();
-            },
-            (error) => {
-              // See error code charts below.
-              console.log(error.code, error.message);
-            },
-            { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-        );
-      */
-  };
 
   loop = () => {
+    if (this.state.lock) {
+      return; //don't run this function twice
+    }
+    else{
+      this.state.lock = true;
+    }
     if (this.context.isEnabled && !this.state.updatesEnabled) {
       console.log("get location updates");
       this.getLocationUpdates();
@@ -80,6 +39,7 @@ export default class HeatMap extends Component {
       console.log("remove location updates");
       this.removeLocationUpdates();
     }
+    this.setState({lock: false}); //unlock 
   };
 
   mainLoop = async () => {
@@ -118,6 +78,8 @@ export default class HeatMap extends Component {
     return false;
   };
 
+  
+
   hasLocationPermission = async () => {
     //checks if permission has been granted
     if (Platform.OS === "ios") {
@@ -128,26 +90,33 @@ export default class HeatMap extends Component {
     if (Platform.OS === "android" && Platform.Version < 23) {
       return true;
     }
-
-    const hasPermission = PermissionsAndroid.check(
+    const hasPermissionAndroid = await PermissionsAndroid.request(
       // TODO: this won't run, need to debug
-      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, 
+      {
+        title: "Location Tracking Permission",
+        message:
+          "Stop the Spread needs access to your location data " +
+          "to know if you've come into contact with anyone infected. ",
+        buttonNeutral: "Ask Me Later",
+        buttonNegative: "Cancel",
+        buttonPositive: "OK"
+      }
     );
-    {
-      return hasPermission;
-    }
+    { if (hasPermissionAndroid === PermissionsAndroid.RESULTS.GRANTED) {
+      return true;
+    } 
+    else {
+      console.log("Permission denied")
+      return false;
+      }//else
+    } 
+    
   };
 
   async componentDidMount() {
     //called at the beginning
-    if (
-      async () => {
-        await this.hasLocationPermission;
-      }
-    ) {
-      // when the user first opens this screen get the location
       this.mainLoop();
-    }
   }
 
   componentWillUnmount() {
@@ -355,7 +324,7 @@ export default class HeatMap extends Component {
       speed: 0,
       timestamp: 0,
       county: null,
-      toggle: false,
+      lock: false,
       /*
     format of location :{
       "coords": {"accuracy": number, 
