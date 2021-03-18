@@ -17,7 +17,7 @@ MERGED from [:react-native-screens] C:\Users\Starfall\Documents\GitHub\StopTheSp
 MERGED from [:react-native-vector-icons] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\release\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-webview\android\build\intermediates\library_manifest\release\AndroidManifest.xml:2:1-23:12
 MERGED from [com.facebook.react:react-native:0.63.3] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\9d603025d675b06645a122d51230afc5\jetified-react-native-0.63.3\AndroidManifest.xml:2:1-13:12
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ab1e643a84812407e759e389420d865f\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d15c59b6755f16928dcb3a1e590d8a36\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\bdd12e717dce0623989f1d33dbf56cb5\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\fcff261677dfffc6075c02575bfcf2ba\android-jsc-r245459\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\0de090eb085e2927f79d80e53e48fe4a\material-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -287,8 +287,8 @@ MERGED from [:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSp
 MERGED from [:react-native-webview] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-webview\android\build\intermediates\library_manifest\release\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.63.3] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\9d603025d675b06645a122d51230afc5\jetified-react-native-0.63.3\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.63.3] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\9d603025d675b06645a122d51230afc5\jetified-react-native-0.63.3\AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ab1e643a84812407e759e389420d865f\multidex-2.0.0\AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ab1e643a84812407e759e389420d865f\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d15c59b6755f16928dcb3a1e590d8a36\multidex-2.0.1\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d15c59b6755f16928dcb3a1e590d8a36\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\bdd12e717dce0623989f1d33dbf56cb5\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\bdd12e717dce0623989f1d33dbf56cb5\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\fcff261677dfffc6075c02575bfcf2ba\android-jsc-r245459\AndroidManifest.xml:7:5-9:41

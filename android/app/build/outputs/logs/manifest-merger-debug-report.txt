@@ -11,7 +11,7 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] C:\Users\Starfal
 MERGED from [:react-native-firebase_auth] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-firebase\auth\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:react-native-firebase_database] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-firebase\database\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:react-native-firebase_app] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-firebase\app\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ab1e643a84812407e759e389420d865f\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d15c59b6755f16928dcb3a1e590d8a36\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [:react-native-community_masked-view] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-geolocation-service] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-geolocation-service\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
@@ -301,8 +301,8 @@ MERGED from [:react-native-firebase_database] C:\Users\Starfall\Documents\GitHub
 MERGED from [:react-native-firebase_database] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-firebase\database\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-firebase_app] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-firebase\app\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-firebase_app] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-firebase\app\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ab1e643a84812407e759e389420d865f\multidex-2.0.0\AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\ab1e643a84812407e759e389420d865f\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d15c59b6755f16928dcb3a1e590d8a36\multidex-2.0.1\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Starfall\.gradle\caches\transforms-2\files-2.1\d15c59b6755f16928dcb3a1e590d8a36\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [:react-native-community_masked-view] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-geolocation-service] C:\Users\Starfall\Documents\GitHub\StopTheSpread\node_modules\react-native-geolocation-service\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41

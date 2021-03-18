@@ -6641,9 +6641,9 @@ public final class R {
     public static final int abc_vector_test=0x7f07005b;
     public static final int amu_bubble_mask=0x7f07005c;
     public static final int amu_bubble_shadow=0x7f07005d;
-    public static final int assets_cov2=0x7f07005e;
-    public static final int assets_covid1=0x7f07005f;
-    public static final int assets_onboardingimg1=0x7f070060;
+    public static final int assets_covid1=0x7f07005e;
+    public static final int assets_onboardingimg1=0x7f07005f;
+    public static final int assets_stslogo=0x7f070060;
     public static final int avd_hide_password=0x7f070061;
     public static final int avd_show_password=0x7f070062;
     public static final int btn_checkbox_checked_mtrl=0x7f070063;
