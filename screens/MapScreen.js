@@ -26,53 +26,56 @@ export default class HeatMap extends Component {
   watchId = null; //number
 
   loop = () => {
-    if (this.state.lock) {
-      return; //don't run this function twice
+    if (!this.state.lock) {
+      //console.log(this.state.lock);
+      this.setState({lock: true}); //lock
+      //console.log(this.state.lock);
+
+      if (this.context.isEnabled && !this.state.updatesEnabled) {
+        //console.log("get location updates");
+        this.getLocationUpdates();
+      } else if (!this.context.isEnabled) {
+        //console.log("remove location updates");
+        this.removeLocationUpdates();
+      }
+      this.setState({lock: false}); //unlock 
     }
-    else{
-      this.state.lock = true;
-    }
-    if (this.context.isEnabled && !this.state.updatesEnabled) {
-      console.log("get location updates");
-      this.getLocationUpdates();
-    } else if (!this.context.isEnabled && this.watchId != null) {
-      console.log("remove location updates");
-      this.removeLocationUpdates();
-    }
-    this.setState({lock: false}); //unlock 
   };
 
   mainLoop = async () => {
     mloop = setInterval(this.loop, 5000);
   };
 
-  hasLocationPermissionIOS = async () => {
+  hasLocationPermissionIOS = async () => { q
     // asks for location permission on iOS
-
-    const openSetting = () => {
-      Linking.openSettings().catch(() => {
-        Alert.alert("Unable to open settings");
-      });
-    };
-    const status = await Geolocation.requestAuthorization("whenInUse");
-
-    if (status === "granted") {
-      return true;
-    }
-
-    if (status === "denied") {
-      Alert.alert("Location permission denied");
-    }
-
-    if (status === "disabled") {
-      Alert.alert(
-        `Turn on Location Services to allow "${appConfig.displayName}" to determine your location.`,
-        "",
-        [
-          { text: "Go to Settings", onPress: openSetting },
-          { text: "Don't Use Location", onPress: () => {} },
-        ]
-      );
+    try {
+      const openSetting = () => {
+        Linking.openSettings().catch(() => {
+          Alert.alert("Unable to open settings");
+        });
+      };
+      const status = await Geolocation.requestAuthorization("whenInUse");
+  
+      if (status === "granted") {
+        return true;
+      }
+  
+      if (status === "denied") {
+        Alert.alert("Location permission denied");
+      }
+  
+      if (status === "disabled") {
+        Alert.alert(
+          `Turn on Location Services to allow "${appConfig.displayName}" to determine your location.`,
+          "",
+          [
+            { text: "Go to Settings", onPress: openSetting },
+            { text: "Don't Use Location", onPress: () => {} },
+          ]
+        );
+      }
+    } catch (error) {
+      console.log(error);
     }
 
     return false;
@@ -91,7 +94,6 @@ export default class HeatMap extends Component {
       return true;
     }
     const hasPermissionAndroid = await PermissionsAndroid.request(
-      // TODO: this won't run, need to debug
       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, 
       {
         title: "Location Tracking Permission",
@@ -107,7 +109,7 @@ export default class HeatMap extends Component {
       return true;
     } 
     else {
-      console.log("Permission denied")
+      console.log("Permission denied");
       return false;
       }//else
     } 
@@ -116,6 +118,7 @@ export default class HeatMap extends Component {
 
   async componentDidMount() {
     //called at the beginning
+      this.hasLocationPermission();
       this.mainLoop();
   }
 
@@ -201,6 +204,7 @@ export default class HeatMap extends Component {
     const hasLocationPermission = await this.hasLocationPermission();
 
     if (!hasLocationPermission) {
+      this.context.setIsEnabled(false);
       return; //do nothing if user denies location permission
     }
     console.log("has location permission");
@@ -512,7 +516,7 @@ export default class HeatMap extends Component {
   render() {
     const { user, getUserInfectionStatus, getUsers } = this.context;
     const { location } = this.state;
-    this.hasLocationPermission();
+    //this.hasLocationPermission();
     /*if(uInfectionStatus == 'P'){
   mapWeight = 99;
 }else if(uInfectionStatus == 'N'){

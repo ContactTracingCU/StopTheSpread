@@ -114,6 +114,14 @@ export const AuthProvider = ({ children }) => {
           console.log(e);
               }
       },
+      setIsEnabled: (props) =>{
+        try {
+          setIsEnabled(props);
+
+        } catch (error) {
+          console.log(error);
+        }
+      },
       }}
     >
       {children}

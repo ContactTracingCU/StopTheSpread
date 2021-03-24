@@ -141,7 +141,7 @@ const HomeScreen = ({ navigation }) => {
             onStartShouldSetResponder={() => this._panel.hide()}
           >
             <View style={styles.toggleLocationView}>
-              <Text style={styles.toggleLocationText}>Location Services</Text>
+              <Text style={styles.toggleLocationText}>Location Tracking</Text>
               <Switch
                 style={styles.toggleLocationSwitch}
                 trackColor={{ false: "#767577", true: "#a6e4d0" }}
