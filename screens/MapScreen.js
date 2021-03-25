@@ -149,8 +149,10 @@ export default class HeatMap extends Component {
       .catch((error) => {
         console.log(error);
         this.setState({ county: null });
+        x = null;
       })
       .finally(() => {});
+      return x;
   };
 
   getLocation = async () => {
