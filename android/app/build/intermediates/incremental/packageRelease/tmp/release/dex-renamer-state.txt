@@ -1,4 +1,4 @@
-#Tue Mar 23 23:26:45 MDT 2021
+#Wed Mar 24 22:46:24 MDT 2021
 base.0=C\:\\Users\\Starfall\\Documents\\GitHub\\StopTheSpread\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out\\classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex
